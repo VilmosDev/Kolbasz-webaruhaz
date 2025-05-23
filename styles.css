@@ -6,6 +6,25 @@
     padding: 0;
 }
 
+:root {
+    --main-color: #0d71bd;
+    --smooth: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
 body {
     font-family: lato ;
+    background-color: #282a2b;
+    color: var(--main-color);
+
+}
+
+
+h1 {
+    margin: auto;
+    text-align: center;
+    transition: var(--smooth);
+}
+
+h1:hover {
+    scale: 2;
 }
