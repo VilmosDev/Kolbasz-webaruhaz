@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Főoldal | Tóth Geri Kolbászboltja</title>
+    <title>Csaptelepek | Tóth Geri Kolbászboltja</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
 </head>
@@ -14,12 +14,11 @@
     <!-- title  -->
     <div class="title-wrapper">
         <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-        <p class="title">Üdvözöllek Tóth Geri Kolbászboltjában!</p> 
-        <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
-        <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+        <p class="title">Tóth Geri Kolbászboltja</p> 
+        <a href="./csaptelepek.html"><p class="subtitle csaptelep">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
         <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
     </div>
-    <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. Ez <b>Tóth Geri Kolbászboltja</b></q><span style="font-style: normal;"> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
+    
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
@@ -81,13 +80,30 @@
             console.error('Hiba történt a másolás során:', err);
         });
     }
+
+    // csaptelep csaba tel
+    function copyTel2(event) {
+        event.preventDefault();
+        const tel = '06708008135';
+        navigator.clipboard.writeText(tel).then(() => {
+            alert('Telefonszám másolva a vágólapra!');
+        }).catch(err => {
+            console.error('Hiba történt a másolás során:', err, '<br> ');
+        });
+    }
     </script>
     
-    <!-- Navbar Kategória -->
+    <!-- Webshop -->
         <div class="title-wrapper">
             <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-            <p class="title">NAV CÍM</p> 
+            <p class="title">CSAPTELEPEK</p> 
             <!-- opcionalis subtitle -->
-            <!-- <p class="subtitle">SUB</p> -->
+            <p class="subtitle">A legjobb csaptelepek Tompaháton és környékén</p>
             <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
         </div>
+
+        <!-- Hívja Csaptelep Csabát  -->
+        <p class="csaptelep_csaba">Vásárolt tőlünk csaptelepet és elromlott? Hívja <u title="+36 70 800 8135"><a href="" onclick="copyTel2(event)">Csaptelep Csabát!</a></u></p>
+        <a onclick="copyTel2(event)" class="csaptelep-link"><img src="./kepek/csaptelepcsaba.png" alt="" id="csaptelep_csaba"></a>
+
+        <!-- Webshop -->
