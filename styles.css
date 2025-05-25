@@ -10,8 +10,10 @@
 }
 
 :root {
-    --main-color: #0d71bd;
+    --main-color: rgb(92, 49, 0);
     --smooth: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    --navcolor: #ffe883;
+    --navhover: #cebb67;
 }
 
 body {
@@ -21,6 +23,14 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:visited a:link a:active a:hover {
+    color: var(--main-color);
+}
 
 h1 {
     margin: auto;
@@ -37,66 +47,186 @@ h1:hover {
     font-weight: 900;
     text-align: center;
     margin: 1rem;
-    color: rgb(92, 49, 0);
+    color: var(--main-color);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -1%;
+}
+
+.csaptelep::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+    /* transition: 0.3s ease-out; */
+    transition: var(--smooth);
+}
+
+.csaptelep:hover::after {
+    width: 100%;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    position: relative;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+
+.title-wrapper .title {
+    margin: 0;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.title-wrapper .subtitle {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transform-origin: center;
+}
+
+.gif {
+    width: 10rem;
+    height: auto;
+    z-index: -1;
+    user-select: none;
+}
+
+#leftgif, #rightgif {
+    position: static;
+    transform: none;
 }
 
 /* Elérhetőségeink dropdown */
+.main_dropdown_div {
+    /* margin-top: -5%; */
+    margin-left: 1rem;
+}
+
+.main_dropdown_div p {
+    margin-bottom: 0.2%;
+}
+
 .dropbtn {
-    background-color: lightgrey;
-    color: black;
+    background-color: var(--navcolor);
+    color: var(--main-color);
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: var(--smooth);
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
-    background-color: white;
+    background-color: var(--navcolor);
+    transition: var(--smooth);
 }
 
 .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
-    background-color: white;
+    background-color: var(--navcolor);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: var(--smooth);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
 }
 
 .dropdown-content a {
-    color: black;
+    color: var(--main-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: var(--smooth);
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--navhover);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #f1f1f1;
+    background-color: var(--navhover);
 }
 
-/* Kolbászbolt képe */
+/* Kolbászbolt banner */
+.worm {
+    margin-top: -24rem;
+    z-index: 1;
+    position: absolute;
+    margin-left: 95rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.gerifej {
+    margin-top: -24rem;
+    z-index: 3;
+    position: absolute;
+    height: 25rem;
+    margin-top: -25rem;
+    margin-left: 75%;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+}
+
+.gerifej:hover {
+    opacity: 0;
+}
+
+.worm_pic {
+    height: 25rem;
+    z-index: 2;
+    margin-top: -60rem;
+    margin-left: 75%;
+    user-select: none;
+    pointer-events: none;
+    /* position: absolute; */
+}
+
 .geriboy {
     width: 100%;
     height: 25rem;
     z-index: -1;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    margin-top: -1rem;
     /* position: absolute; */
     /* object-fit: cover; */
 }
 
 /* Navbar */
 .navbar {
-    background-color: #ffe883;
-    color: rgb(92, 49, 0);
+    background-color: var(--navcolor);
+    color: var(--main-color);
     padding: 1rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -111,11 +241,247 @@ h1:hover {
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(92, 49, 0);
+    color: var(--main-color);
     font-size: 1.5rem;
     font-weight: 900;
+    padding: 1rem;
+    transition: var(--smooth);
+}
+
+.navbar ul li a:hover {
+    background-color: var(--navhover);
+}
+
+.like_emo_div {
+    width: 15%;
+    height: 30rem;
+    margin-left: 80%;
+    /* margin-top: -5%; */
+    z-index: -1;
+    position: absolute;
+}
+
+.like_emo {
+    width: 100%;
+    height: 30rem;
+    z-index: -1;
+    position: absolute;
+}
+
+/* titkos */
+.tiz {
+    width: 1px;
+    transition: 20s;
+}
+
+.tiz:hover {
+    width: 100%;
+}
+
+.shop_container {
+    background-color: white;
+    position: absolute;
+    width: 100rem;
+    height: 150rem;
+    margin-left: 25rem;
+    z-index: 200;
 }
 
 
+.pad {
+    margin-top: 10%;
+    /* height: 50rem; */
+    width: 10000%;
+    background-color: black;
+    z-index: 1000;
+}
+
+.termekeink {
+    font-weight: 900;
+    color: var(--main-color);
+    background-color: var(--navcolor);
+    font-size: 1.5rem;
+}
+
+#drop-kolbi {
+    font-weight: 0;
+}
+
+.egykerdes {
+    font-size: 1.15rem;
+}
+
+.csaptelep_csaba {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: -1%;
+    margin-bottom: 1rem;
+}
+
+#csaptelep_csaba {
+    width: 25rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.csaptelep-link {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#kolbaszgif {
+    width: 20rem;
+}
+
+.webshop-container {
+    margin-left: 10rem;
+    margin-right: auto;
+    margin-top: 15%;
+}
+
+.web-base {
+    width: 75%;
+    height: 150rem;
+    background-color: white;
+}
+
+.comment-container {
+    margin-left: 80%;
+    position: relative;
+    margin-top: -150rem;
+}
+
+.comments {
+    width: 90%;
+    height: 150rem; 
+    background-color: #ececec;
+    border-radius: 1rem;
+    position: relative;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+/* .comments::-webkit-scrollbar {
+    width: 12px;
+}
+
+.comments::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.comments::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.comments::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */
+
+.comments {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.comments-about-us {
+    position: relative;
+    top: 0;
+    background-color: #ececec;
+    padding: 1rem 0;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#comments-about-us-hr {
+    border-color: rgb(193, 193, 193);
+    border-width: 0.12rem;
+    border-style: solid;
+    width: 90%;
+    margin: 0.5rem auto;
+}
+
+.comment {
+    position: relative;
+    width: 82%;
+    background-color: rgb(184, 184, 184);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+/* Remove absolute positioning */
+.comment#first-comment {
+    margin-top: 2rem;
+}
+
+.comment:not(#first-comment) {
+    margin-top: 1rem;
+}
+
+.comment-user {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.comment-user span {
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.comment-text {
+    margin-left: 1rem;
+    color: black;
+    font-weight: 300;
+}
 
 
+#quote {
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#csaptelep {
+    font-weight: 500;
+    font-size: 1.85rem;
+}
+
+#drjozsef-p {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+
+#highlighted-comment {
+    text-align: center;
+    color: black;
+    font-size: 0.94rem;
+    font-weight: bold;
+}
+
+.user-pfp {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment-stars {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
