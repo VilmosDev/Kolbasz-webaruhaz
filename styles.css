@@ -441,7 +441,7 @@ h1:hover {
 #highlighted-comment {
     text-align: center;
     color: black;
-    font-size: 0.94rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -495,30 +495,62 @@ h1:hover {
 
 .product {
     position: relative;
-    background-color: #888;
-    width: 20rem;
-    height: 30rem;
+    background-color: #dbdbdb;
+    width: 65rem;
+    height: 33rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    margin-left: -113%;
+    border: 0.1rem solid rgb(175, 175, 175);
 }
 
 .product-name {
     text-align: center;
     font-size: 2rem;
     position: relative;
-    /* margin-top: 10%; */
+    margin-top: 2%;
+    font-weight: 300;
+    /* margin-left: -70%; */
+}
+
+.product-price {
+    font-style: italic;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-left: 25%;
+    /* margin-right: auto; */
 }
 
 .product-img {
-    width: 90%;
-    height: auto;
-    object-fit: contain;
-    max-width: 90%;
-    margin-top: 10%;
+    width: 100%;
+    height: 20rem;
+    /* object-fit: contain; */
+    max-width: 100%;
+    /* margin-top: 10%; */
+    /* margin-left: -70%; */
+    border: 0.1rem solid rgb(175, 175, 175);
 }
+
+.product-container {
+    /* position: absolute; */
+    display: block;
+    width: 30%;
+    /* background-color: rgb(255, 0, 0); */
+    margin-left: -70%;
+    height: 120%;
+}
+
+.vl {
+    position: absolute;
+    border-left: 0.1rem solid rgb(175, 175, 175);
+    margin-left: -35%;
+    margin-top: -1.5%;
+    height: 100%;
+  }
 
 .webshop-container {
     margin-left: 10rem;
@@ -541,7 +573,7 @@ h1:hover {
 /* Main layout container */
 .page-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem;
     gap: 2rem;
     max-width: 100%;
@@ -554,6 +586,9 @@ h1:hover {
     max-width: 70%;
     padding: 2rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .products-grid {
@@ -564,6 +599,38 @@ h1:hover {
     justify-content: center;
 }
 
+.product-desc-name {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -5%;
+}
+
+.product-description-container {
+    float: right;
+    /* background-color: rgb(227, 227, 227); */
+    width: 60%;
+    height: 100%;
+    margin-top: -53%;
+    margin-left: 33%;
+    /* border: 0.1rem solid rgb(175, 175, 175); */
+}
+
+.product-description {
+    margin: 1rem;
+    font-size: larger;
+    text-align: justify;
+}
+
+.prod-desc-btn {
+    width: 80%;
+    height: 15%;
+    margin-left: 10%;
+    margin-top: auto;
+}
+
+.product-description p {
+    margin-bottom: 0.8rem;
+}
 .comments-section {
     width: 25%;
     position: sticky;
@@ -655,3 +722,13 @@ h1:hover {
     width: 90%;
     margin: 0.5rem auto;
 }
+
+.web-above {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    margin: 3% auto;
+    /* margin-left: 1%; */
+    position: relative;
+}
+
