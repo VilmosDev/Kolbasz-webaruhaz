@@ -251,6 +251,20 @@ h1:hover {
 
 .navbar ul li a:hover {
     background-color: var(--navhover);
+    scale: 1.05;
+    transition: var(--smooth);
+    border-radius: 0.4rem;
+}
+
+.navbar li {
+    transition: var(--smooth);
+    border-radius: 0.1rem;
+}
+
+.navbar li:hover {
+    scale: 1.05;
+    transition: var(--smooth);
+    border-radius: 0.4rem;
 }
 
 .like_emo_div {
@@ -821,3 +835,55 @@ h1:hover {
     transform: translateX(25%);
 }
 
+/*-----------------------------------------------------*/
+
+.footer-content {
+    position: relative;
+    background-color: red;
+    height: 20rem;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 0;
+    padding: 3rem 6rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+#in-footer {
+    position: relative;
+}
+
+.footer-2nd-part {
+    bottom: 0;
+    height: 50%;
+    width: 100% ;
+    margin: auto;
+    background-color: blue;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+    max-height:fit-content;
+}
+
+.partners-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.partners-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.partners-item-img {
+    height: 5rem;
+    border: 4px #333 solid;
+}
