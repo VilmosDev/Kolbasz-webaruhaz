@@ -575,11 +575,19 @@ h1:hover {
 
 .vl {
     position: absolute;
-    border-left: 0.1rem solid rgb(175, 175, 175);
+    border-left: 0.1rem solid #afafaf;
     margin-left: -35%;
     margin-top: -1.5%;
     height: 100%;
   }
+
+.product-divider {
+    position: relative;
+    width: 350%;
+    border-style: solid;
+    margin-left: -125%;
+    border-color: #afafaf;
+}
 
 .webshop-container {
     margin-left: 10rem;
@@ -766,7 +774,7 @@ h1:hover {
 
 .cool-button-3 {
     border: none;
-    background-color: #333;
+    background-color: #515151;
     /* background-color: rgb(40.91, 36.735, 35.931);  maybe this one would be better */
     color: rgb(255, 240.05, 223.18);
     padding: 1rem 2rem;
@@ -896,7 +904,7 @@ h1:hover {
     transition: var(--smooth);
     transform: translateX(0%) scaleX(1);
     transform-origin: right;
-    filter: invert(1);
+    filter: invert(0.7) brightness(1.3) sepia(0.2) saturate(2) hue-rotate(350deg);
 }
 
 .cool-button-3:hover .sausage-svg {
