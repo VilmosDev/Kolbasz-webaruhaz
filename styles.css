@@ -732,3 +732,72 @@ h1:hover {
     position: relative;
 }
 
+
+/*----------Cool button 3 V1-------------*/
+
+.cool-button-3 {
+    border: none;
+    background-color: #333;
+    /* background-color: rgb(40.91, 36.735, 35.931);  maybe this one would be better */
+    color: rgb(255, 240.05, 223.18);
+    padding: 1rem 2rem;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: 1rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 1rem;
+    width: 13vw;
+    /* width: fit-content; */
+    margin: auto;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.cool-button-3:hover {
+    border-radius: 1.2vw;
+}
+
+.button-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: rgb(255, 240.05, 223.18);
+}
+
+.cool-button-3:hover .button-text {
+    transform: translateX(-35%);
+}
+
+.button-icon-apple {
+    height: 2vw;
+    transition: all 0.50s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0%) scaleX(1);
+    transform-origin: right;
+}
+
+.cool-button-3:hover .button-icon-apple {
+    transform: translateX(-300%) scaleX(0);
+    opacity: 0;
+}
+
+.button-icon-arrow {
+    height: 2vw;
+    transition: all 0.30s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    position: absolute;
+    right: -2vw;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.cool-button-3:hover .button-icon-arrow {
+    opacity: 1;
+    right: 1.5rem;
+    transform: scaleX(1);
+}
+
