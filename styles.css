@@ -534,14 +534,15 @@ h1:hover {
 
 .product-price-menu {
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     width: 100%;
+    margin-top: -3%;
 }
 
 .product-price-menu2 {
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     width: 100%;
 }
