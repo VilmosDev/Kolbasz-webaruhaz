@@ -251,20 +251,20 @@ h1:hover {
 
 .navbar ul li a:hover {
     background-color: var(--navhover);
-    scale: 1.05;
+    /* scale: 1.05;
     transition: var(--smooth);
-    border-radius: 0.4rem;
+    border-radius: 0.4rem; */
 }
 
 .navbar li {
     transition: var(--smooth);
-    border-radius: 0.1rem;
+    /* border-radius: 0.1rem; */
 }
 
 .navbar li:hover {
-    scale: 1.05;
     transition: var(--smooth);
-    border-radius: 0.4rem;
+    /* scale: 1.05; */
+    /* border-radius: 0.4rem; */
 }
 
 .like_emo_div {
@@ -324,6 +324,7 @@ h1:hover {
 
 .egykerdes {
     font-size: 1.15rem;
+    margin-top: 1rem;
 }
 
 .csaptelep_csaba {
@@ -537,6 +538,7 @@ h1:hover {
     margin-top: 2%;
     font-weight: 300;
     width: 100%;
+    margin-bottom: 6%;
 }
 
 .product-price {
@@ -777,11 +779,12 @@ h1:hover {
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     padding: 1rem;
-    width: 13vw;
+    width: 100%;
     /* width: fit-content; */
     margin: auto;
     overflow: hidden;
     text-decoration: none;
+    margin-left: -5%;
 }
 
 .cool-button-3:hover {
@@ -886,4 +889,17 @@ h1:hover {
 .partners-item-img {
     height: 5rem;
     border: 4px #333 solid;
+}
+
+.sausage-svg {
+    height: 2rem;
+    transition: var(--smooth);
+    transform: translateX(0%) scaleX(1);
+    transform-origin: right;
+    filter: invert(1);
+}
+
+.cool-button-3:hover .sausage-svg {
+    transform: translateX(-300%) scaleX(0);
+    opacity: 0;
 }
