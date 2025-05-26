@@ -801,3 +801,10 @@ h1:hover {
     transform: scaleX(1);
 }
 
+.cool-button-3-div {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(25%);
+}
+
