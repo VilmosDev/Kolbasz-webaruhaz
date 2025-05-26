@@ -501,11 +501,19 @@ h1:hover {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     margin-left: -113%;
     border: 0.1rem solid rgb(175, 175, 175);
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 120%;
+    margin-left: -70%;
 }
 
 .product-name {
@@ -514,15 +522,29 @@ h1:hover {
     position: relative;
     margin-top: 2%;
     font-weight: 300;
-    /* margin-left: -70%; */
+    width: 100%;
 }
 
 .product-price {
     font-style: italic;
     font-size: 2.25rem;
     text-align: center;
-    margin-left: 25%;
-    /* margin-right: auto; */
+    width: 100%;
+}
+
+.product-price-menu {
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-top: -3%;
+}
+
+.product-price-menu2 {
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 .product-img {
@@ -533,15 +555,6 @@ h1:hover {
     /* margin-top: 10%; */
     /* margin-left: -70%; */
     border: 0.1rem solid rgb(175, 175, 175);
-}
-
-.product-container {
-    /* position: absolute; */
-    display: block;
-    width: 30%;
-    /* background-color: rgb(255, 0, 0); */
-    margin-left: -70%;
-    height: 120%;
 }
 
 .vl {
