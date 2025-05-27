@@ -14,11 +14,16 @@
     --smooth: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
     --navcolor: #ffe883;
     --navhover: #cebb67;
+    --div-color: #e9b67a;
+    --secondary-div-color: #ecb16e ;
+    --div-hover-color: #e1a25a;
+    --text-hover-color: rgb(242, 210, 174);
 }
 
 body {
     font-family: 'Outfit' ;
-    background-color: #dbbc31;
+    background-color: var(--div-color);
+    /* } background-color: #dbbc31; */
     color: var(--main-color);
     scroll-behavior: smooth;
 
@@ -846,18 +851,24 @@ h1:hover {
     transform: translateX(25%);
 }
 
+.cool-button-3:hover .sausage-svg {
+    transform: translateX(-300%) scaleX(0);
+    opacity: 0;
+}
+
 /*-----------------------------------------------------*/
 
 .footer-content {
     position: relative;
-    background-color: red;
-    height: 20rem;
+    height: fit-content;
     width: 95%;
     margin: auto;
     margin-bottom: 0;
     padding: 3rem 6rem;
     border-radius: 0.8rem;
     margin-bottom: 2rem;
+    background-color: var(--secondary-div-color);
+    box-shadow: 0px 1rem 100px rgb(55, 55, 55);
 }
 
 #in-footer {
@@ -869,11 +880,11 @@ h1:hover {
     height: 50%;
     width: 100% ;
     margin: auto;
-    background-color: blue;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     text-align: center;
-    color: white;
+    color: var(--main-color);
     max-height:fit-content;
+    
 }
 
 .partners-div {
@@ -883,20 +894,38 @@ h1:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
-
 
 .partners-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    border: 4px solid red;
+    border-radius: 1rem;
+    padding: 0.5rem; 
+    transition: var(--smooth);
+}
 
+.partners-item:hover {
+    background-color: var(--div-hover-color) ;
+    color: var(--text-hover-color);
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.partners-item:hover .partners-item-img {    
+    scale: 1.1;
 }
 
 .partners-item-img {
-    height: 5rem;
-    border: 4px #333 solid;
+    transition: var(--smooth);
+    height: 7rem;
 }
 
 .sausage-svg {
@@ -907,7 +936,11 @@ h1:hover {
     filter: invert(0.7) brightness(1.3) sepia(0.2) saturate(2) hue-rotate(350deg);
 }
 
-.cool-button-3:hover .sausage-svg {
-    transform: translateX(-300%) scaleX(0);
-    opacity: 0;
+.partners-item-name {
+    font-size: 1.3rem;
+}
+
+.partners-header {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
