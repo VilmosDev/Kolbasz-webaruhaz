@@ -137,6 +137,7 @@ h1:hover {
     border: none;
     cursor: pointer;
     transition: var(--smooth);
+    border-radius: 0.4rem;
 }
 
 .dropdown {
@@ -144,6 +145,7 @@ h1:hover {
     display: inline-block;
     background-color: var(--navcolor);
     transition: var(--smooth);
+    border-radius: 0.4rem;
 }
 
 .dropdown-content {
@@ -157,6 +159,11 @@ h1:hover {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
+    border-radius: 0.4rem;
+}
+
+.dropdown-content:hover {
+    border-radius: 1rem;
 }
 
 .dropdown-content a {
@@ -943,4 +950,10 @@ h1:hover {
 .partners-header {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+#right {
+    left: 5%;
+    position: absolute;
+    transform: translateX(-5%);
 }
