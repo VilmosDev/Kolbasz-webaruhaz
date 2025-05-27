@@ -58,30 +58,6 @@
     </div>
     </div>
     
-    <script>
-    // tel másolás
-        function copyTel(event) {
-        event.preventDefault();
-        const tel = '06205555555';
-        navigator.clipboard.writeText(tel).then(() => {
-            alert('Telefonszám másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    // Email másolás 
-    
-    function copyEmail(event) {
-        event.preventDefault();
-        const email = 'tothgeri@gmail.com';
-        navigator.clipboard.writeText(email).then(() => {
-            alert('Email cím másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    </script>
-    
     <!-- Navbar Kategória -->
         <div class="title-wrapper">
             <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">

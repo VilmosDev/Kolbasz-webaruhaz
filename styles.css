@@ -18,6 +18,7 @@
     --secondary-div-color: #ecb16e ;
     --div-hover-color: #e1a25a;
     --text-hover-color: rgb(242, 210, 174);
+    --secondary-div-color-border: #de9440;
 }
 
 body {
@@ -137,7 +138,7 @@ h1:hover {
     border: none;
     cursor: pointer;
     transition: var(--smooth);
-    border-radius: 0.4rem;
+    /* border-radius: 0.4rem; */
 }
 
 .dropdown {
@@ -145,7 +146,7 @@ h1:hover {
     display: inline-block;
     background-color: var(--navcolor);
     transition: var(--smooth);
-    border-radius: 0.4rem;
+    /* border-radius: 0.4rem; */
 }
 
 .dropdown-content {
@@ -159,12 +160,12 @@ h1:hover {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    border-radius: 0.4rem;
+    /* border-radius: 0.4rem; */
 }
 
-.dropdown-content:hover {
-    border-radius: 1rem;
-}
+/* .dropdown-content:hover {
+    /* border-radius: 1rem; 
+} */
 
 .dropdown-content a {
     color: var(--main-color);
@@ -875,23 +876,29 @@ h1:hover {
     border-radius: 0.8rem;
     margin-bottom: 2rem;
     background-color: var(--secondary-div-color);
-    box-shadow: 0px 1rem 100px rgb(55, 55, 55);
+    /* border-width: 0.1rem;
+    border-color: rgb(145, 77, 0);
+    border-style: solid; */
+    box-shadow: 0 0 1rem 0.5rem rgb(55, 55, 55);
 }
 
 #in-footer {
     position: relative;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; */
 }
 
 .footer-2nd-part {
     bottom: 0;
     height: 50%;
-    width: 100% ;
+    width: 100%;
     margin: auto;
     padding: 0.5rem 1rem;
     text-align: center;
     color: var(--main-color);
-    max-height:fit-content;
-    
+    max-height: fit-content;
 }
 
 .partners-div {
@@ -904,15 +911,21 @@ h1:hover {
     
 }
 
+.partners-container {
+    width: fit-content;
+    display: flebox;
+}
+
 .partners-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    border: 4px solid red;
+    border: 0.15rem solid var(--div-hover-color);
     border-radius: 1rem;
     padding: 0.5rem; 
     transition: var(--smooth);
+    width: 12%;
 }
 
 .partners-item:hover {
@@ -930,17 +943,22 @@ h1:hover {
     scale: 1.05;
 }
 
-.partners-item-img {
-    transition: var(--smooth);
-    height: 7rem;
-}
-
 .sausage-svg {
     height: 2rem;
     transition: var(--smooth);
     transform: translateX(0%) scaleX(1);
     transform-origin: right;
     filter: invert(0.7) brightness(1.3) sepia(0.2) saturate(2) hue-rotate(350deg);
+}
+
+.partners-item-img {
+    transition: var(--smooth);
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 3%;
 }
 
 .partners-item-name {

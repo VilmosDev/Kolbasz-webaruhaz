@@ -60,41 +60,9 @@
     </div>
     -->
     
-    <script>
-    // tel másolás
-        function copyTel(event) {
-        event.preventDefault();
-        const tel = '06205555555';
-        navigator.clipboard.writeText(tel).then(() => {
-            alert('Telefonszám másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    // Email másolás 
-    
-    function copyEmail(event) {
-        event.preventDefault();
-        const email = 'tothgeri@gmail.com';
-        navigator.clipboard.writeText(email).then(() => {
-            alert('Email cím másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    </script>
-    
-    <!-- Navbar Kategória -->
-        <div class="title-wrapper">
-            <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-            <p class="title">NAV CÍM</p> 
-            <!-- opcionalis subtitle -->
-            <!-- <p class="subtitle">SUB</p> -->
-            <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
-        </div>
-
+   
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 10rem;">
         <div class="footer-content">
             <div class="" id="in-footer">
 
@@ -115,15 +83,25 @@
                     <h3 class="partners-header">Partnereink</h3>
                     <div class="partners-div">
                         <div class="partners-item">
-                            <img src="./kepek/kolbasz-jarat-icon.png" alt="kolbasz-jarat-icon" title="kolbasz-jarat-icon" class="partners-item-img">
+                            <img src="./kepek/kolbasz-jarat-icon.png" alt="kolbasz-jarat-icon" class="partners-item-img">
                             <b class="partners-item-name">Kolbász járat kft.</b>
                         </div>
-                        <!--
-                        <div class="partners-item">
-                            <img src="./kepek/kolbasz-jarat-icon.png" alt="" class="partners-item-img">
-                            <b>Kolbász járat kft.</b>
+                       <div class="partners-item">
+                            <img src="./kepek/feri.jpg" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">feri</b>
                         </div>
-                        -->
+                        <div class="partners-item">
+                            <img src="./kepek/vilmos fegyver.png" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">vilitech</b>
+                        </div>
+                        <div class="partners-item">
+                            <img src="./kepek/csaptelepcsaba.png" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">Csaptelep Csaba</b>
+                        </div>
+                        <div class="partners-item">
+                            <img src="./kepek/szexikoni.jpg" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">koni</b>
+                        </div>
 
                         </div>
                     </div>
