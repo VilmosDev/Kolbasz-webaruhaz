@@ -990,7 +990,6 @@ h1:hover {
     .partners-item-img {
         height: 5rem;
         width: 5rem;
-        max-height: 15vw;
     }
 }
 
@@ -998,8 +997,6 @@ h1:hover {
     .partners-item-img {
         height: 4.5rem;
         width: 4.5rem;
-        max-height: 18vw;
-        margin-top: 1.5%;
     }
 }
 
@@ -1010,6 +1007,12 @@ h1:hover {
 .partners-header {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+    .partners-header {
+        
+    }
 }
 
 #right {
