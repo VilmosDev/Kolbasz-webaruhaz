@@ -42,11 +42,11 @@
     <!-- banner -->
 <img src="./kepek/kolbaszbolt_gerivel.png" alt="tgeri" class="geriboy">
 <!-- <div class="worm"> -->
-    <img src="./kepek/gerifej.png" alt="" class="gerifej">
-    <img src="./kepek/worm.png" alt="" class="worm_pic">
+    <!-- <img src="./kepek/gerifej.png" alt="" class="gerifej">
+    <img src="./kepek/worm.png" alt="" class="worm_pic"> -->
 <!-- </div> -->
 
-<!-- Elérhetőségeink -->
+<!-- Elérhetőségeink 
 <div class="main_dropdown_div">
     <p class="egykerdes">Van <b>EGY KÉRDÉSE?</b> ↓</p>
     <div class="dropdown"> 
@@ -54,40 +54,141 @@
         <div class="dropdown-content">
             <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
             <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
-            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: tothgeri@gmail.com</a>
+            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: kolbaszshop@gmail.com</a>
         </div>
     </div>
     </div>
-    
-    <script>
-    // tel másolás
-        function copyTel(event) {
-        event.preventDefault();
-        const tel = '06205555555';
-        navigator.clipboard.writeText(tel).then(() => {
-            alert('Telefonszám másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    // Email másolás 
-    
-    function copyEmail(event) {
-        event.preventDefault();
-        const email = 'tothgeri@gmail.com';
-        navigator.clipboard.writeText(email).then(() => {
-            alert('Email cím másolva a vágólapra!');
-        }).catch(err => {
-            console.error('Hiba történt a másolás során:', err);
-        });
-    }
-    </script>
-    
-    <!-- Navbar Kategória -->
-        <div class="title-wrapper">
-            <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-            <p class="title">NAV CÍM</p> 
-            <!-- opcionalis subtitle -->
-            <!-- <p class="subtitle">SUB</p> -->
-            <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+    -->
+
+
+
+
+
+    <!--Kiemelt termékeink...-->
+
+    <section class="highlight-product-div">
+        <p class="highlight-product-div-title">Kiemelt Termékeink</p>
+        <div class="highlight-product-item">
+            <div class="highlight-product-image-container">
+                <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="Kiemelt termék: A kis tizes" class="highlight-product-image">
+            </div>
+            <div class="highlight-product-content">
+                <!-- <h2 class="highlight-product-title"> - KIEMELT TERMÉKÜNK - </h2> -->
+                <h2 class="highlight-product-title">Házi Kolbász</h2>
+                <p class="highlight-product-description">
+                    A <b>Házi Kolbász</b> a Tóth Geri Kolbászboltja egyik legnépszerűbb, legkiemelkedőbb, házilag készített kolbásza. Kiváló minőségű alapanyagokból, hagyományos recept alapján, gondos odafigyeléssel készül, hogy minden falatban érezhető legyen a szenvedély és a szakértelem.
+                </p>
+                <ul class="highlight-product-features">
+                    <li>Friss, helyi alapanyagok</li>
+                    <li>Füstös, karakteres ízvilág</li>
+                    <li>Limitált mennyiségben elérhető</li>
+                </ul>
+                <div>
+                    <a href="./kolbasz.html" class="cool-button-3 highlight-product-button">
+                        Tudj meg többet
+                        <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+            </div>
         </div>
+        
+        <div class="highlight-product-item">
+            <div class="highlight-product-image-container">
+                <img src="./kepek/kolbaszok/kilbikolbi.png" alt="Kiemelt termék: A kis tizes" class="highlight-product-image">
+            </div>
+            <div class="highlight-product-content">
+                <h2 class="highlight-product-title">Kilbi Kolbi</h2>
+                <p class="highlight-product-description">
+                    A <b>Kis Tizes</b> a Tóth Geri Kolbászboltja egyik legnépszerűbb, házilag készített kolbásza. Kiváló minőségű alapanyagokból, hagyományos recept alapján, gondos odafigyeléssel készül, hogy minden falatban érezhető legyen a szenvedély és a szakértelem.
+                </p>
+                <ul class="highlight-product-features">
+                    <li>Friss, helyi alapanyagok</li>
+                    <li>Füstös, karakteres ízvilág</li>
+                    <li>Limitált mennyiségben elérhető</li>
+                </ul>
+                <div>
+                    <a href="./kolbasz.html" class="cool-button-3 highlight-product-button">
+                        Tudj meg többet
+                        <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+   
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="" id="in-footer">
+
+                <div >
+                    <div class="dropdown" id="right"> 
+                        <button class="dropbtn">Elérhetőségeink</button>
+                        <div class="dropdown-content">
+                            <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
+                            <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
+                            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: kolbaszshop@gmail.com</a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+                <div class="footer-2nd-part">
+                    <h3 class="partners-header">Partnereink</h3>
+                    <div class="partners-div">
+                        <div class="partners-item">
+                            <img src="./kepek/kolbasz-jarat-icon.png" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">Kolbász járat kft.</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/feri.jpg" alt="feri" class="partners-item-img">
+                            <b class="partners-item-name">feri</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/kolbasz-jarat-icon.png" alt="kolbasz-jarat-icon" class="partners-item-img">
+                            <b class="partners-item-name">Kolbász járat kft.</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/nemmor-icon.png" alt="mor-icon" class="partners-item-img">
+                            <b class="partners-item-name">móric</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/vilmos fegyver.png" alt="vilmos-icon" class="partners-item-img">
+                            <b class="partners-item-name">vilitech</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/csaptelepcsaba.png" alt="csaptelepcsaba-icon" class="partners-item-img">
+                            <b class="partners-item-name">Csaptelep Csaba</b>
+                        </div>
+
+                        <div class="partners-item">
+                            <img src="./kepek/gyep.jpg" alt="gyepshop-icon" class="partners-item-img">
+                            <b class="partners-item-name">Gyepshop.hu</b>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </footer>
+
+
+
+
+
