@@ -1146,15 +1146,16 @@ h1:hover {
 }
 
 /* Dolgozók - rohadtul nem működik, plz fix */
-.dologozo-container {
+.dolgozo-container {
     position: relative;
     margin: auto;
     width: 100%;
-    height: 50rem;
+    height: 45rem;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: var(--div-color);
 }
 
 .dolgozo {
@@ -1165,39 +1166,49 @@ h1:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    /* opacity: 0; */
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
 
 .dolgozo.active {
     opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
 }
 
 .dolgozo-nev {
     text-align: center;
     font-weight: 700;
-    padding-top: 2rem;
     font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .dolgozo-munka {
     font-weight: 500;
     font-size: 1.8rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .dolgozo-img {
     width: 20rem;
     height: 25rem;
-    margin-left: 16.5%;
-    margin-top: 5%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .dolgozo-desc {
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 2%;
+    padding: 0 1rem;
 }
 
 .prev, .next {
@@ -1214,15 +1225,15 @@ h1:hover {
     border-radius: 0.25rem;
     user-select: none;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 3;
 }
 
 .next {
-    right: 25%;
+    right: 5%;
 }
 
 .prev {
-    left: 25%;
+    left: 5%;
 }
 
 .prev:hover, .next:hover {
