@@ -275,19 +275,19 @@ h1:hover {
     transition: var(--smooth);
     display: flex;
     align-items: center;
+    height: 4rem;
 }
 
 .navbar li:hover {
     transition: var(--smooth);
 }
 
-/* A font-size azért px mert nem műkődik remmel */
 .cart {
-    font-size: 40px !important;
-    /* padding: 0.5rem !important; */
+    font-size: 3rem !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateX(-0.1rem);
 }
 
 .like_emo_div {
