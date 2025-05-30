@@ -39,55 +39,29 @@ function termekekRedirect() {
 
 
 // slideshow
-let slideIndex = 1;
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("dolgozo");
-    
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-    }
-    
-    // Show the current slide
-    slides[slideIndex-1].classList.add('active');
-}
-
-// Initialize the first slide when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    let slides = document.getElementsByClassName("dolgozo");
-    if (slides.length > 0) {
-        // Show first slide
-        slides[0].classList.add('active');
-    }
-    
-    // Add click event listeners to arrows
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    
-    if (prevButton) {
-        prevButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            plusSlides(-1);
-        });
-    }
-    
-    if (nextButton) {
-        nextButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            plusSlides(1);
-        });
-    }
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function changeSlide(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  prev.addEventListener('click', () => changeSlide(-1));
+  next.addEventListener('click', () => changeSlide(1));
+
+  // Initialize the first slide
+  showSlide(slideIndex);
 });

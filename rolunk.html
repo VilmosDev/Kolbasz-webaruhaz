@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rólunk | Tóth Geri Kolbászboltja</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
     <link rel="icon" href="./kepek/favicon.png">
 </head>
 <body>
@@ -79,33 +80,74 @@
                 <!-- <p class="rolunk-p">Tóth Geri Kolbászboltja nem csak egy átlagos kolbászbolt. Tóth Geri Kolbászboltja egy </p> -->
             </p>
         </div>
-<!-- Dolgozóink - rohadtul nem mukodik, plz fix -->
+        
+        <!-- Dolgozóink - rohadtul nem mukodik, plz fix -->
         <div>
             <p class="rolunk-title">
                 Dolgozóink
             </p>
-
+            
             <div class="dolgozo-container">
-                <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
-                <a onclick="plusSlides(1)" class="next">&#10095;</a>
                 
-                <div class="dolgozo">
+                
+                
+                <div id="dolgozo" class="slide">
                     <p class="dolgozo-nev">Tóth Gergő</p>
                     <p class="dolgozo-munka">Főnök</p>
-                    <img src="./kepek/feri.jpg" alt="Tóth Gergő" class="dolgozo-img">
+                    <img src="./kepek/geriboy.jpg" alt="Tóth Gergő" class="dolgozo-img">
                     <p class="dolgozo-desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus unde doloribus ipsa ut ducimus numquam vero dolor hic tempore amet totam ab neque corrupti maxime, exercitationem, at sit officia sunt.
+                        A bolt megálmodója, aki minden receptet személyesen felügyel és garantálja a minőséget.
                     </p>
                 </div>
 
-                <div class="dolgozo">
-                    <p class="dolgozo-nev">Tóth Gergő</p>
-                    <p class="dolgozo-munka">Főnök</p>
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Kovács Réka</p>
+                    <p class="dolgozo-munka">Főséf & Ízinnovátor</p>
                     <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
                     <p class="dolgozo-desc">
-                        kakafej
+                        Új ízkombinációk specialistája, aki a hagyományos recepteket merész csavarokkal frissíti fel.
                     </p>
                 </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Nagy Attila</p>
+                    <p class="dolgozo-munka">Kolbászséf</p>
+                    <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        A húsok és fűszerek mestere, aki a kolbászok textúráját és fűszerezését hozza tökélyre.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Szabó Éva</p>
+                    <p class="dolgozo-munka">Bolti eladó & Vásárlói Tanácsadó</p>
+                    <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        Mindig mosolygós és segítőkész, a vásárlók első számú információforrása.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Kiss Balázs</p>
+                    <p class="dolgozo-munka">Marketingmenedzser</p>
+                    <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        A márka hangját viszi tovább, kreatív kampányokkal ismerteti meg a közönséget kolbászainkkal.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Papp Lajos</p>
+                    <p class="dolgozo-munka">Raktáros & Logisztikai Felelős</p>
+                    <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        Pontosságával és precizitásával gondoskodik arról, hogy minden termék mindig friss és elérhető legyen.
+                    </p>
+                </div>
+
+
+                <a onclick="changeSlide(-1)" class="prev">&#10094;</a>
+                <a onclick="changeSlide(1)" class="next">&#10095;</a>
             </div>
         </div>
     

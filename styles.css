@@ -1158,7 +1158,7 @@ h1:hover {
     background-color: var(--div-color);
 }
 
-.dolgozo {
+#dolgozo {
     width: 30rem;
     height: 40rem;
     background-color: white;
@@ -1166,9 +1166,7 @@ h1:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
+    /* pointer-events: none; */
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     display: flex;
@@ -1177,10 +1175,20 @@ h1:hover {
     padding: 1rem;
 }
 
-.dolgozo.active {
+.slide {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dolgozo-container, slide:first-child {
+    display: block;
+}
+
+.slide.active {
+    display: block;
     opacity: 1;
-    pointer-events: auto;
-    z-index: 2;
+    /* pointer-events: auto; */
 }
 
 .dolgozo-nev {
@@ -1225,7 +1233,7 @@ h1:hover {
     border-radius: 0.25rem;
     user-select: none;
     background-color: rgba(0,0,0,0.5);
-    z-index: 3;
+    /* z-index: 3; */
 }
 
 .next {
