@@ -262,24 +262,32 @@ h1:hover {
     font-weight: 900;
     padding: 1rem;
     transition: var(--smooth);
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar ul li a:hover {
     background-color: var(--navhover);
-    /* scale: 1.05;
-    transition: var(--smooth);
-    border-radius: 0.4rem; */
 }
 
 .navbar li {
     transition: var(--smooth);
-    /* border-radius: 0.1rem; */
+    display: flex;
+    align-items: center;
 }
 
 .navbar li:hover {
     transition: var(--smooth);
-    /* scale: 1.05; */
-    /* border-radius: 0.4rem; */
+}
+
+/* A font-size azért px mert nem műkődik remmel */
+.cart {
+    font-size: 40px !important;
+    /* padding: 0.5rem !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .like_emo_div {
@@ -1145,8 +1153,8 @@ h1:hover {
     border-color: var(--main-color);
 }
 
-/* Dolgozók - rohadtul nem működik, plz fix */
-.dolgozo-container {
+/* Dolgozók - rohadtul működik, plz appreciate me */
+.dolgozo-container, .dolgozo-container2 {
     position: relative;
     margin: auto;
     width: 100%;
@@ -1158,7 +1166,7 @@ h1:hover {
     background-color: var(--div-color);
 }
 
-#dolgozo {
+#dolgozo, #dolgozo2 {
     width: 30rem;
     height: 40rem;
     background-color: white;
@@ -1175,9 +1183,17 @@ h1:hover {
     padding: 1rem;
 }
 
+#dolgozo2 {
+    width: 32.5rem;
+}
+
 .slide {
     display: none;
     opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.slide2 {
     transition: all 0.3s ease;
 }
 
@@ -1185,27 +1201,27 @@ h1:hover {
     display: block;
 }
 
-.slide.active {
+.slide.active, .slide.active2 {
     display: block;
     opacity: 1;
     /* pointer-events: auto; */
 }
 
-.dolgozo-nev {
+.dolgozo-nev, .dolgozo-nev2 {
     text-align: center;
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
-.dolgozo-munka {
+.dolgozo-munka, .dolgozo-munka2 {
     font-weight: 500;
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.dolgozo-img {
+.dolgozo-img, .dolgozo-img2 {
     width: 20rem;
     height: 25rem;
     object-fit: cover;
@@ -1213,7 +1229,7 @@ h1:hover {
     margin-bottom: 1rem;
 }
 
-.dolgozo-desc {
+.dolgozo-desc, .dolgozo-desc2 {
     text-align: center;
     font-size: 1.2rem;
     padding: 0 1rem;
@@ -1237,11 +1253,11 @@ h1:hover {
 }
 
 .next {
-    right: 5%;
+    right: 25%;
 }
 
 .prev {
-    left: 5%;
+    left: 25%;
 }
 
 .prev:hover, .next:hover {

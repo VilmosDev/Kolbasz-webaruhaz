@@ -12,7 +12,7 @@ function copyTel(event) {
 
 function copyEmail(event) {
     event.preventDefault();
-    const email = 'tothgeri@gmail.com';
+    const email = 'gergototh539@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
         alert('Email cím másolva a vágólapra!');
     }).catch(err => {
@@ -65,3 +65,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize the first slide
   showSlide(slideIndex);
 });
+
