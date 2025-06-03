@@ -98,8 +98,8 @@
 }
 
 .kolbasz-zsir-title {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 3.5rem;
+  font-weight: 700;
   text-align: center;
   padding-top: 2%;
 }
@@ -107,8 +107,11 @@
 .kolbasz-zsir-description {
   font-size: 1.5rem;
   font-weight: 400;
-  text-align: center;
+  text-align: justify;
   padding-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align-last: center;
 }
 
 .extra-arrow {
