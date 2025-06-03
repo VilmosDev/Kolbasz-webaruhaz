@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    font-family: 'Outfit' ;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     background-color: var(--div-color);
     /* } background-color: #dbbc31; */
     color: var(--main-color);
@@ -1263,3 +1263,32 @@ h1:hover {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+.kolbasz-container {
+    width: 100rem;
+    height: 100rem;
+    background-color: white;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 1rem;
+     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.kolbasz-container img {
+    width: 30%;
+    height: 35%;
+    /* border-radius: 1rem; */
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.kolbasz-nev {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    padding-top: 5%;
+}
+
