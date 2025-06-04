@@ -54,11 +54,17 @@ h1:hover {
 }
 
 .title {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: 900;
     text-align: center;
     margin: 1rem;
     color: var(--main-color);
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.2;
 }
 
 .subtitle {
@@ -95,12 +101,31 @@ h1:hover {
     padding: 0 2rem;
     margin-bottom: 5rem;
     gap: 2rem;
+    flex-wrap: nowrap;
 }
 
 .title-wrapper .title {
     margin: 0;
     z-index: 1;
-    white-space: nowrap;
+    white-space: normal;
+    width: auto;
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1.2;
+    flex: 1;
+    text-align: center;
+}
+
+.gif {
+    width: 10rem;
+    height: auto;
+    z-index: 1;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+#leftgif, #rightgif {
+    position: static;
+    transform: none;
 }
 
 .title-wrapper .subtitle {
@@ -110,18 +135,8 @@ h1:hover {
     transform: translateX(-50%);
     white-space: nowrap;
     transform-origin: center;
-}
-
-.gif {
-    width: 10rem;
-    height: auto;
-    z-index: -1;
-    user-select: none;
-}
-
-#leftgif, #rightgif {
-    position: static;
-    transform: none;
+    width: 100%;
+    text-align: center;
 }
 
 /* Elérhetőségeink dropdown */
@@ -630,18 +645,19 @@ h1:hover {
     padding: 2rem;
 }
 
-/* Main layout container */
 .page-container {
     display: flex;
     justify-content: center;
     padding: 2rem;
     gap: 2rem;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 10%;
 }
 
 .products-section {
+    width: 70%;
     flex: 1;
     max-width: 70%;
     padding: 2rem;
@@ -1030,7 +1046,6 @@ h1:hover {
     transform: translateX(-5%);
 }
 
-/* Highlight Product Section Styles */
 .highlight-product-div {
     background-color: transparent;
     height: fit-content;
