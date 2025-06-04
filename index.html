@@ -7,21 +7,51 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<div class="container">
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li><button class="close-navbar-btn" onclick="closeNavbar()">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button></li>
+            <li class="home-li" id="active-link"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li id="accent-link"><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
+</div>
+
+
+
+
+
     <!-- titkos -->
-    <img src="./kepek/a kis tizes.jpg" alt="" class="tiz">
+    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
 
     <!-- title  -->
     <div class="title-wrapper">
-        <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-        <p class="title">Üdvözöllek Tóth Geri Kolbászboltjában!</p>
-        <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
-        <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
-        <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+            <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
+            <p class="title">Üdvözöllek <br> Tóth Geri Kolbászboltjában!</p>
+            <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
+            <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+            <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+
     </div>
-    <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. <b>Ez Tóth Geri Kolbászboltja!</b></q><span> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
+    <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. <b>Ez Tóth Geri Kolbászboltja!</b></q><span id="member-name"> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
@@ -49,7 +79,7 @@
     <img src="./kepek/worm.png" alt="" class="worm_pic"> -->
 <!-- </div> -->
 
-<!-- Elérhetőségeink 
+<!-- Elérhetőségeink
 <div class="main_dropdown_div">
     <p class="egykerdes">Van <b>EGY KÉRDÉSE?</b> ↓</p>
     <div class="dropdown"> 
@@ -67,9 +97,7 @@
 
 
 
-    <!--Kiemelt termékeink...
-    és ne írd át mert ez az enyém
-    akkor te meg az enyemet ne ird at 😭-->
+    <!--Kiemelt termékeink-->
 
     <section class="highlight-product-div">
         <p class="highlight-product-div-title">Kiemelt Termékeink</p>
@@ -162,6 +190,9 @@
                 </div>
         </div>
     </footer>
+
+</body>
+</html>
 
 
 

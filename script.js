@@ -66,3 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlide(slideIndex);
 });
 
+// Telefonos navbar
+const navbar2 = document.getElementById('navbar2')
+
+function openNavbar() {
+    navbar2.classList.add('show');
+}
+
+function closeNavbar() {
+    navbar2.classList.remove('show');
+}
+
+
