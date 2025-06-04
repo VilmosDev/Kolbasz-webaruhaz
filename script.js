@@ -34,7 +34,7 @@ function copyTel2(event) {
 
 // termekek.html redirect
 function termekekRedirect() {
-    window.location.href = "termekeink.html";
+    window.location.href = "kolbasz.html#scroll";
 }
 
 
