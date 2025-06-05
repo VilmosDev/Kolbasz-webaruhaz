@@ -324,17 +324,17 @@ h1:hover {
     width: 100%;
 }
 
-nav {
+/*#navbar2 {
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--hover-color);
-}
+}*/
 
-nav ul {
+#navbar2 ul {
     list-style: none;
     display: flex;
 }
 
-nav li {
+#navbar2 li {
     display: flex;
 }
 
@@ -342,16 +342,11 @@ nav li {
     margin-right: auto;
 }
 
-nav a {
+#navbar2 a {
     display: flex;
-    color: var(--text-color);
     text-decoration: none;
     padding: 1rem 2rem;
     transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--hover-color);
 }
 
 #active-link {
@@ -387,13 +382,16 @@ nav a:hover {
         border-bottom-left-radius: 2rem;
         border-right: none;
     }
+
+    .container #cart-link:hover {
+        border-bottom-left-radius: 2rem;
+    }
+
     .container {
         display: block;
         width: 100%;
     }
-    #navbar2 {
-        transition: all 1.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+
     .container .close-navbar-btn {
         background-color: transparent;
     }
@@ -414,42 +412,45 @@ nav a:hover {
         display: block;
     }
 
-    nav {
+    #navbar2 {
         position: fixed;
         top: 0;
         right: -100%;
         height: 100vh;
         width: min(15em, 100%);
-        z-index: 10;
+        z-index: 1000000;
         background-color: var(--primary-color);
         border-left: 1px solid var(--hover-color);
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .show {
-        right: 0;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: ;
     }
 
+    .show {
+        position: fixed !important;
+        right: 0 !important;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        transform:  !important;
+    }
     li a {
         color: var(--main-color);;
     }
 
-    nav.show ~ #overlay {
+    #navbar2.show ~ #overlay {
         display: block;
         transition: all 1.3s ease;
     }
 
-    nav ul {
-        width: 100%;
+    #navbar2 ul {
+
         flex-direction: column;
     }
 
-    nav a {
+    #navbar2 a {
         width: 100%;
         padding-left: 2.5rem;
     }
 
-    nav .home-li {
+    #navbar2 .home-li {
         margin-right: 0;
     }
 
