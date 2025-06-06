@@ -847,6 +847,30 @@ h1:hover {
     border: 0.1rem solid rgb(175, 175, 175);
 }
 
+@media (max-width: 1500px) {
+    .product {
+        width: 225%;
+        height: 110%;
+        margin-left: -62.5%;
+    }
+
+    .product-description-container {
+        transform: translateY(-25%);
+    }
+
+    .vl {
+        transform: translateY(-0.75%);
+    }
+
+    .cool-button-3-div {
+        margin-left: -35%;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .product-container {
     display: flex;
     flex-direction: column;
