@@ -513,10 +513,10 @@ h1:hover {
         display: none !important;
     }
 
-    ul li:hover ul.mobile-dropdown {
+/*    ul li:hover ul.mobile-dropdown {
         transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
         display: block !important;
-    }
+    }*/
 
     #mobile-dropdown-li {
         transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
