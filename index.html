@@ -22,7 +22,8 @@
 
     <nav class="" id="navbar2">
         <ul>
-            <li><button class="close-navbar-btn" onclick="closeNavbar()">
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
                 <i class="fa-solid fa-x fa-xl"></i>
             </button></li>
             <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
@@ -50,7 +51,7 @@
         </ul>
     </nav>
 
-    <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
 </div>
 
 
