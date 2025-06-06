@@ -78,3 +78,13 @@ function closeNavbar() {
 }
 
 
+// Telefonos dropdown
+const mobileDropdownLi = document.getElementById('mobile-dropdown-li');
+
+function opendropdown() {
+    mobileDropdownLi.classList.add('show-dropdown');
+}
+
+function closedropdown() {
+    mobileDropdownLi.classList.remove('show-dropdown');
+}

@@ -26,10 +26,24 @@
                 <i class="fa-solid fa-x fa-xl"></i>
             </button></li>
             <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
-            <li><a href="#">Termékeink</a></li>
-            <li><a href="#">Rólunk</a></li>
-            <li id=""><a href="#">Extra</a></li>
-            <li id="accent-link"><a href="#">Kapcsolat</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                    <ul class="mobile-dropdown">
+                        <li><a href="./kolbasz.html">Kolbászok</a></li>
+                        <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                    </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link"><a href="./kapcsolat.html">Kapcsolat</a></li>
             <li id="cart-link">
                 <a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a>
             </li>
