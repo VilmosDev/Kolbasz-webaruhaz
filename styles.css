@@ -558,8 +558,8 @@ h1:hover {
 
     #mobile-dropdown-li-arrow-close {
         z-index: 10000000000000000;
-        transition: all 0.8s cubic-bezier(0.2, 2, 0.2, 1);
-        transform: translateX(-200%) scaleY(0) scaleX(0);
+        transition: all 0.8s cubic-bezier(0.2, 1.2, 0.2, 1);
+        transform: translateX(200%) scaleY(0) scaleX(0);
         transform-origin: right;
     }
 
@@ -576,7 +576,7 @@ h1:hover {
 
     .mobile-dropdown {
         border-left: 4px solid var(--accent-color) !important;
-        border-radius: 0.6rem;
+        border-radius: 0.3em;
     }
 }
 
