@@ -62,7 +62,7 @@
 
 <div style="margin-left: auto;
             margin-right: auto;
-            width: 50%">
+            width: fit-content">
 
 |                                  | Kolbász shop |  Gyepshop | 
 |:--------------------------------:|:------------:|:---------:|
