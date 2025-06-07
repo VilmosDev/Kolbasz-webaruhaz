@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rólunk | Tóth Geri Kolbászboltja</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
     <link rel="icon" href="./kepek/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- titkos -->
@@ -35,15 +37,12 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
         </ul>
     </nav>
 
     <!-- banner -->
 <img src="./kepek/kolbaszbolt_gerivel.png" alt="tgeri" class="geriboy">
-<!-- <div class="worm"> -->
-    <!-- <img src="./kepek/gerifej.png" alt="" class="gerifej">
-    <img src="./kepek/worm.png" alt="" class="worm_pic"> -->
-<!-- </div> -->
 
 <!-- Elérhetőségeink -->
 <div class="main_dropdown_div">
@@ -79,45 +78,98 @@
                 <!-- <p class="rolunk-p">Tóth Geri Kolbászboltja nem csak egy átlagos kolbászbolt. Tóth Geri Kolbászboltja egy </p> -->
             </p>
         </div>
-<!-- Dolgozóink -->
+        
+        <!-- Dolgozóink - rohadtul mukodik, plz clap me -->
         <div>
             <p class="rolunk-title">
                 Dolgozóink
             </p>
-            <p>f</p>
-
-            <!-- Tóth Gergő -->
-            <div class="dolgozo-container">         
-                <div class="dolgozo">
-                <p class="dolgozo-nev">
-                    Tóth Gergő
-                </p>
-                <p class="dolgozo-munka">
-                    Főnök
-                </p>
-                <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
-                <p class="dolgozo-desc">
-                    Tóth Gergő a Tóth Geri Kolbászboltjának főnöke, vezetője, alapítója. Nélküle sehol nem lenne a kolbászbolt, mert létre sem jött volna.
-                </p>
-                </div>
-
-                <div class="dolgozo">
-                    <p class="dolgozo-nev">
-                        Tóth Gergő
-                    </p>
-                    <p class="dolgozo-munka">
-                        Főnök
-                    </p>
-                    <img src="./kepek/a kis tizes.jpg" alt="Tóth Gergő" class="dolgozo-img">
+            
+            <div class="dolgozo-container">
+                
+                
+                
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Tóth Gergő</p>
+                    <p class="dolgozo-munka">Főnök</p>
+                    <img src="./kepek/geriboy.jpg" alt="Tóth Gergő" class="dolgozo-img">
                     <p class="dolgozo-desc">
-                        Tóth Gergő a Tóth Geri Kolbászboltjának főnöke, vezetője, alapítója. Nélküle sehol nem lenne a kolbászbolt, mert létre sem jött volna.
+                        A bolt megálmodója, aki minden receptet személyesen felügyel és garantálja a minőséget.
                     </p>
                 </div>
 
-                <!-- Next and prev buttons  -->
-                <a class="prev">&#10094;</a>
-                <a class="prev">&#10095;</a>
-        </div>
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Kovács Réka</p>
+                    <p class="dolgozo-munka">Főséf & Ízinnovátor</p>
+                    <img src="./kepek/kovacsreka.jpg" alt="Kovács Réka" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        Új ízkombinációk specialistája, aki a hagyományos recepteket merész csavarokkal frissíti fel.
+                    </p>
+                </div>
 
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Nagy Attila</p>
+                    <p class="dolgozo-munka">Kolbászséf</p>
+                    <img src="./kepek/nagyattila.jpg" alt="Nagy Attila" class="dolgozo-img" style="object-fit: unset;">
+                    <p class="dolgozo-desc">
+                        A húsok és fűszerek mestere, aki a kolbászok textúráját és fűszerezését hozza tökélyre.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Szabó Éva</p>
+                    <p class="dolgozo-munka">Bolti eladó & Vásárlói Tanácsadó</p>
+                    <img src="./kepek/szaboeva.jpg" alt="Szabó Éva" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        Mindig mosolygós és segítőkész, a vásárlók első számú információforrása.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Kiss Balázs</p>
+                    <p class="dolgozo-munka">Marketingmenedzser</p>
+                    <img src="./kepek/kissbalazs.jpg" alt="Kiss Balázs" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        A márka hangját viszi tovább, kreatív kampányokkal ismerteti meg a közönséget kolbászainkkal.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Papp Lajos</p>
+                    <p class="dolgozo-munka">Raktáros & Logisztikai Felelős</p>
+                    <img src="./kepek/papplajos.jpg" alt="Papp Lajos" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        Pontosságával és precizitásával gondoskodik arról, hogy minden termék mindig friss és elérhető legyen.
+                    </p>
+                </div>
+
+                <div id="dolgozo" class="slide">
+                    <p class="dolgozo-nev">Kis Tizes</p>
+                    <p class="dolgozo-munka">Marketingarc & Gyepshop cégtulaj</p>
+                    <img src="./kepek/a kis tizes.jpg" alt="Kis Tizes" class="dolgozo-img">
+                    <p class="dolgozo-desc">
+                        A marketingarca, támogatója, illetve partnere Tóth Geri Kolbászboltjának.
+                    </p>
+                </div>
+
+
+                <a onclick="changeSlide(-1)" class="prev">&#10094;</a>
+                <a onclick="changeSlide(1)" class="next">&#10095;</a>
+            </div>
         </div>
-    
+    <div>
+        <p class="rolunk-title">
+            Oppok
+        </p>
+        <div class="dolgozo-container2">
+        <div class="dolgozo2">
+            <div id="dolgozo2" class="slide2">
+                <p class="dolgozo-nev2">Slimfites Osztrák Lakatos Szempillaspirálszószgyár</p>
+                <p class="dolgozo-munka2">Csúnyákat mondott ránk és felidegelte Tóth Gergőt</p>
+                <img src="./kepek/kolbasz-szem.jpg" alt="limfites Osztrák Lakatos Szempillaspirálszószgyár" class="dolgozo-img2">
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

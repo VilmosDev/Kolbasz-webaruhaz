@@ -12,7 +12,7 @@ function copyTel(event) {
 
 function copyEmail(event) {
     event.preventDefault();
-    const email = 'tothgeri@gmail.com';
+    const email = 'gergototh539@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
         alert('Email cím másolva a vágólapra!');
     }).catch(err => {
@@ -34,5 +34,57 @@ function copyTel2(event) {
 
 // termekek.html redirect
 function termekekRedirect() {
-    window.location.href = "termekeink.html";
+    window.location.href = "kolbasz.html#scroll";
+}
+
+
+// slideshow
+document.addEventListener('DOMContentLoaded', function() {
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function changeSlide(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  prev.addEventListener('click', () => changeSlide(-1));
+  next.addEventListener('click', () => changeSlide(1));
+
+  // Initialize the first slide
+  showSlide(slideIndex);
+});
+
+// Telefonos navbar
+const navbar2 = document.getElementById('navbar2')
+
+function openNavbar() {
+    navbar2.classList.add('show');
+}
+
+function closeNavbar() {
+    navbar2.classList.remove('show');
+}
+
+
+// Telefonos dropdown
+const mobileDropdownLi = document.getElementById('mobile-dropdown-li');
+
+function opendropdown() {
+    mobileDropdownLi.classList.add('show-dropdown');
+}
+
+function closedropdown() {
+    mobileDropdownLi.classList.remove('show-dropdown');
 }

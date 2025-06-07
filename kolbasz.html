@@ -1,14 +1,61 @@
 <!doctype html>
 <html lang="hu">
 <head>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kolbászok | Tóth Geri Kolbászboltja</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+<div class="container">
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li><button class="close-navbar-btn" onclick="closeNavbar()">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button></li>
+            <li class="home-li"><a href="./index.html">Főoldal</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                <ul class="mobile-dropdown">
+                    <li><a href="./kolbasz.html" id="active-link">Kolbászok</a></li>
+                    <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li id="cart-link">
+                <a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
+</div>
+
+
+
+
     <!-- <img src="./kepek/svg/sausage.svg" alt=""> -->
     <!-- <img src="./kepek/gerifej_color.png" alt=""> -->
     <!-- titkos -->
@@ -19,6 +66,7 @@
         <a href="./csaptelepek.html"><p class="subtitle csaptelep">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
         <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
     </div>
+
     
     <!-- Ide majd lehetne egy navbar -->
     <nav class="navbar">
@@ -36,6 +84,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
         </ul>
     </nav>
 
@@ -45,10 +94,10 @@
 
 
 <!-- Te amikor TGK veszed a kolbit -->
-<div class="like_emo_div">
+<!-- <div class="like_emo_div">
     <p style="text-align: center; font-size: 2rem;">Te amikor Tóth Geri Kolbászboltjában veszed a kolbászt, hurkát, vagy virslit</p>
     <img src="./kepek/like_emo_clickbait.png" alt="emoji" title="Te amikor Tóth Geri Kolbászboltjában veszed a kolbászt, hurkát, vagy virslit" class="like_emo">
-</div>
+</div> -->
 
 <!-- Elérhetőségeink dropdown -->
  <div class="main_dropdown_div">
@@ -67,8 +116,8 @@
     <div class="title-wrapper">
         <img src="./kepek/tgeriforog.gif" alt="Főni" class="gif" id="kolbaszgif" title="Főni">
         <p class="title">
-            Kolbászok <br> 
-            Hurkák <br> 
+            Kolbászok<br> 
+            Hurkák<br> 
             Virslik
         </p> 
         <img src="./kepek/tgeriforog_invert.gif" alt="Főni" class="gif" id="kolbaszgif" title="Főni">
@@ -78,7 +127,7 @@
 
     <!-- Webshop -->
     <div class="page-container">
-        <section class="products-section">
+        <section class="products-section" id="scroll">
             <p class="web-above">
                 Minden terméket itt készítünk el a saját receptünkből. <br>
                 <span style="font-style: italic; font-size: 2rem;">Szívből, lélekből!</span>

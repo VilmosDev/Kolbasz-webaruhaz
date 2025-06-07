@@ -1,25 +1,77 @@
 <!doctype html>
 <html lang="hu">
 <head>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Főoldal | Tompaháti Kolbászbolt</title>
+    <title>Főoldal | Tóth Geri Kolbászboltja</title>    
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+<div class="container">
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow"
+                         onclick="opendropdown();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                    <ul class="mobile-dropdown">
+                        <li><a href="./kolbasz.html">Kolbászok</a></li>
+                        <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                    </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li id="cart-link">
+                <a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+</div>
+
+
+
+
+
     <!-- titkos -->
-    <img src="./kepek/a kis tizes.jpg" alt="" class="tiz">
+    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
 
     <!-- title  -->
     <div class="title-wrapper">
-        <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
-        <p class="title">Üdvözöllek a tompaháti kolbászboltan!</p>
-        <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
-        <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
-        <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+            <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
+            <p class="title">Üdvözöllek <br> Tóth Geri Kolbászboltjában!</p>
+            <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
+            <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+            <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+
     </div>
-    <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. <b>Ez egy igazi kolbászbolt!</b></q><span> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
+    <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. <b>Ez Tóth Geri Kolbászboltja!</b></q><span id="member-name"> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
@@ -36,6 +88,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
         </ul>
     </nav>
 
@@ -46,7 +99,7 @@
     <img src="./kepek/worm.png" alt="" class="worm_pic"> -->
 <!-- </div> -->
 
-<!-- Elérhetőségeink 
+<!-- Elérhetőségeink
 <div class="main_dropdown_div">
     <p class="egykerdes">Van <b>EGY KÉRDÉSE?</b> ↓</p>
     <div class="dropdown"> 
@@ -64,9 +117,7 @@
 
 
 
-    <!--Kiemelt termékeink...
-    és ne írd át mert ez az enyém
-    akkor te meg az enyemet ne ird at 😭-->
+    <!--Kiemelt termékeink-->
 
     <section class="highlight-product-div">
         <p class="highlight-product-div-title">Kiemelt Termékeink</p>
@@ -77,7 +128,7 @@
             <div class="highlight-product-content">
                 <h2 class="highlight-product-title">Házi Kolbász</h2>
                 <p class="highlight-product-description">
-                    A <b>Házi Kolbász</b> a tompaháti kolbászboltja egyik legnépszerűbb, legkiemelkedőbb, házilag készített kolbásza. Kiváló minőségű alapanyagokból, hagyományos recept alapján, gondos odafigyeléssel készül, hogy minden falatban érezhető legyen a szenvedély és a szakértelem.
+                    A <b>Házi Kolbász</b> Tóth Geri kolbászboltjának egyik legnépszerűbb, legkiemelkedőbb, házilag készített kolbásza. Kiváló minőségű alapanyagokból, hagyományos recept alapján, gondos odafigyeléssel készül, hogy minden falatban érezhető legyen a szenvedély és a szakértelem.
                 </p>
                 <ul class="highlight-product-features">
                     <li>Friss, helyi alapanyagok</li>
@@ -95,7 +146,6 @@
                 
             </div>
         </div>
-
     </section>
 
     
@@ -105,9 +155,9 @@
     <footer class="footer">
         <div class="footer-content">
 
-            <div class="" id="in-footer">
+            <div id="in-footer">
 
-                <div >
+
                     <div class="dropdown" id="right"> 
                         <button class="dropbtn">Elérhetőségeink</button>
                         <div class="dropdown-content">
@@ -117,47 +167,42 @@
                             
                         </div>
                     </div>
-                </div>
 
                 
 
 
                 <div class="footer-2nd-part">
                     <h3 class="partners-header">Partnereink</h3>
+
+                    <a href="./tgeri.html#kolbasz-jarat">
                     <div class="partners-div">
                         <div class="partners-item">
                             <img src="./kepek/kolbasz-jarat-icon.png" alt="kolbasz-jarat-icon" class="partners-item-img">
                             <b class="partners-item-name">Kolbász járat kft.</b>
                         </div>
+                    </a>
 
-<!--                        <div class="partners-item">-->
-<!--                            <img src="./kepek/feri.jpg" alt="feri" class="partners-item-img">-->
-<!--                            <b class="partners-item-name">feri</b>-->
-<!--                        </div>-->
-
-<!--                        <div class="partners-item">-->
-<!--                            <img src="./kepek/nemmor-icon.png" alt="mor-icon" class="partners-item-img">-->
-<!--                            <b class="partners-item-name">móric</b>-->
-<!--                        </div>-->
-
-<!--                        <div class="partners-item">-->
-<!--                            <img src="./kepek/vilmos fegyver.png" alt="vilmos-icon" class="partners-item-img">-->
-<!--                            <b class="partners-item-name">vilitech</b>-->
-<!--                        </div>-->
-
+                    <a href="./csaptelepek.html#csaptelep-csaba">
                         <div class="partners-item">
                             <img src="./kepek/csaptelepcsaba.png" alt="csaptelepcsaba-icon" class="partners-item-img">
                             <b class="partners-item-name">Csaptelep Csaba</b>
                         </div>
+                    </a>
 
-                        <div class="partners-item">
+                        <a href="https://gyepshop.netlify.app/">
+                            <div class="partners-item">
                             <img src="./kepek/gyep.jpg" alt="gyepshop-icon" class="partners-item-img">
                             <b class="partners-item-name">Gyepshop.hu</b>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </div>
         </div>
     </footer>
+
+</body>
+</html>
 
 
 
