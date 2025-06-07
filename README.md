@@ -74,9 +74,10 @@
 | 🛒 Saját kosár rendszer          |      ✅      |    ❌    |
 | ⛲️ Csaptelepek                   |      ✅      |    ❌    |
 | 🖼️ Modern dizájn                 |      ✅      |    ✅    |
-| 🌙 Sötét mód                     |      ❌      |    ❌    |
-| 🐍 Gyep árulás                   |      ❌      |    ✅    |
+| 🌙 Sötét mód                     |      ❌      |    ✅    |
+| ✂️ Gyep árulás                   |      ❌      |    ✅    |
 | 🚙 Kolbász járat kft partnere    |      ✅      |    ❌    |
+|             🟰                   |      7️⃣      |    5️⃣    |
 
 </div>
 
