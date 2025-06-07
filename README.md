@@ -5,7 +5,7 @@
     <a href="https://kolbasz-web-test.netlify.app/" >
         <img src="./ReadME-photos/kolbasz-shop icon.png" width="240px" height="120px" align="center" style="border-radius: 8px">
     </a>
-	## ↑
+	<div style="font-size: 40px; margin-top: 8px;">↑</div> 
 	<div style="font-size: 16px">Kattints rá!</div> 
 	
 		
