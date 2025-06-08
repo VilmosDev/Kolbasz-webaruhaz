@@ -56,7 +56,35 @@
 | <img src="https://github.com/yodeku6.png" width="40" height="40"> | [@yodeku6](https://github.com/yodeku6) | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
 | <img src="https://github.com/bAZSIA.png" width="40" height="40"> | [@bAZSIA](https://github.com/bAZSIA) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
+<table>
+<tr>
+<td>
+
+![ViliHun609's Commits](https://github-readme-stats.vercel.app/api?username=ViliHun609&hide=contribs,prs,stars&show_icons=true&theme=transparent&hide_border=true&custom_title=ViliHun609&hide_rank=true)
+
+</td>
+<td>
+
+![highendcpu's Commits](https://github-readme-stats.vercel.app/api?username=highendcpu&hide=contribs,prs,stars&show_icons=true&theme=transparent&hide_border=true&custom_title=Highendcpu&hide_rank=true)
+
+</td>
+</tr>
+<tr>
+<td>
+
+![Yodeku6's Commits](https://github-readme-stats.vercel.app/api?username=yodeku6&hide=contribs,prs,stars&show_icons=true&theme=transparent&hide_border=true&custom_title=Yodeku6&hide_rank=true)
+
+</td>
+<td>
+
+![bAZSIA's Commits](https://github-readme-stats.vercel.app/api?username=bAZSIA&hide=contribs,prs,stars&show_icons=true&theme=transparent&hide_border=true&custom_title=bAZSIA&hide_rank=true)
+
+</td>
+</tr>
+</table>
+
 </div>
+
 
 ### 🆚 Összehasonlítás a [Gyepshop](https://gyepshop.netlify.app/)-pal
 
@@ -80,5 +108,10 @@
 |             🟰                   |      7️⃣      |    5️⃣    |
 
 </div>
+
+
+
+
+
 
 
