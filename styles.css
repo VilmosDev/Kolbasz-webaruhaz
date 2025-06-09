@@ -428,6 +428,10 @@ h1:hover {
         color: black;
     }
 
+    i {
+        color: black;
+    }
+
     .close-navbar-btn {
         display: block;
     }
