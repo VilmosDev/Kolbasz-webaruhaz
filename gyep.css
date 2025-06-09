@@ -129,14 +129,18 @@ html {
 }
 
 .extra-arrow {
+  /* position: fixed; */
   font-size: 10rem;
   font-weight: bold;
   text-align: center;
-  margin-top: -100%;
-  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10000;
   color: #fff;
   animation: kolbasz-arrow-anim 2s ease-in-out infinite;
+  pointer-events: none;
+  margin-top: 30%;
 }
 
 @keyframes kolbasz-arrow-anim {
