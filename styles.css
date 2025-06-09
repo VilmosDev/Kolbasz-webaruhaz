@@ -34,6 +34,7 @@ body {
     /* } background-color: #dbbc31; */
     color: var(--main-color);
     scroll-behavior: smooth;
+    position: relative;
 
 }
 
@@ -1626,5 +1627,123 @@ h1:hover {
 }
 
 
+/*-------------------Kezdő értesítés-------------------*/
+
+.showing {
+    visibility: visible !important;
+    transform: translateY(0%)  translateX(0%) scaleX(1) !important;
+    opacity: 1 !important;
+    z-index: 10000000000000 !important;
+}
+
+#popUpContainer {
+    transform:  translateX(100%) scaleX(0);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000000000000000000010000000000000000000;
+    transition: var(--smooth);
+    opacity: 0;
+}
 
 
+#popUpOverlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.96);
+    z-index: 1000000000000000000010000000000000000000;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.pop-up {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000000000000000000010000000000000000001;
+    background: var(--accent-color);
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    color: white;
+    justify-content: space-between;
+    transition: var(--smooth);
+
+}
+
+.pop-up-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pop-up-button {
+    text-align: center;
+    margin: auto;
+    width: 8rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: var(--smooth);
+}
+
+.pop-up-button:hover {
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.pop-up-text {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.pop-up-header {
+    margin: 0 !important;
+    transition: var(--smooth);
+}
+
+.pop-up-header:hover {
+    scale: 1 !important;
+}
+
+.pop-up-subtitle {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.pop-up-img {
+    height: 1.5rem;
+}
+
+
+#arrow-left {
+    font-size: 1.3rem;
+    animation: arrow-left 1s infinite cubic-bezier(0.4, 0, 0.2, 1) alternate-reverse;
+}
+
+@keyframes arrow-left {
+    from {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-30%) scale(0.95);
+        opacity: 0.7;
+    }
+}

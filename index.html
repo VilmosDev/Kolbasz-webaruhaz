@@ -12,6 +12,34 @@
 </head>
 <body>
 
+<div class="showing" id="popUpOverlay"></div>
+
+<div class="showing" id="popUpContainer">
+
+    <div class="pop-up">
+        <h1 class="pop-up-header">Üdv az oldalon!</h1>
+        <p class="pop-up-text">Ez a legjobb weboldal arra hogy kolbászokat rendelj! <br> <br> Prémium kolbászok közvetlenül a termelőktől - garantált frissesség! </p>
+        <div class="pop-up-text-container">
+                    <p class="pop-up-subtitle">
+                        Támogatott bongészők:
+                        <img src="./kepek/firefox.png" alt="firefox" class="pop-up-img">
+                        <img src="./kepek/chrome.png" alt="chrome" class="pop-up-img">
+                    </p>
+                    <p class="pop-up-subtitle">
+                        Forráskód:
+                        <a href="https://github.com/VilmosDev/Kolbasz-webaruhaz" target="_blank">
+                            <img src="./kepek/github.png" alt="github-icon" class="pop-up-img">
+                        </a>
+                        <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+                    </p>
+
+            <button class="pop-up-button" onclick="closePopUp(); closePopUp2()">OK</button>
+        </div>
+
+    </div>
+
+</div>
+
 <div class="container">
 
     <button class="open-navbar-btn" onclick="openNavbar()">
