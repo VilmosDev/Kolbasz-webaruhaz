@@ -1783,9 +1783,9 @@ h1:hover {
         padding: 1rem !important;
         width: 90%;
         height: fit-content;
-        top: 50%;
+        top: 60%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1) scaleX(1) translateZ(100px);
+        transform: translate(-50%, -60%) scale(1) scaleX(1) translateZ(100px);
         background: var(--accent-color);
         outline: none;
         animation: slide-in-big 1s cubic-bezier(.71,.1,.13,1.03) forwards;
