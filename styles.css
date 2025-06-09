@@ -1851,7 +1851,29 @@ h1:hover {
     .pop-up-mobile-text {
         line-height: 1.5rem;
     }
+    
+    
+    
 }
 
+
+
+@media (max-height: 700px) {
+
+    #popUpContainer {
+        scale: 0.8;
+    }
+
+    .pop-up {
+        top: 70%;
+        transform: translate(-50%, -70%) ;
+    }
+    .pop-up-mobile {
+        top: -5%;
+        font-size: 0.8rem;
+        transform: translate(-50%, -5%);
+    }
+    
+}
 
 /*------------------------------------------------------*/
