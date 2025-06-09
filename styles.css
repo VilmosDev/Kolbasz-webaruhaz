@@ -25,6 +25,7 @@ html {
     --primary-color: #cb9957;
     --hover-color: #be842b;
     --accent-color: #bd8636;
+    --accent-color-not-hover: rgba(189, 134, 54, 0.9);
     --text-color: #c9c9c9;
 }
 
@@ -373,6 +374,9 @@ h1:hover {
 }
 
 .open-navbar-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
 }
 
@@ -417,10 +421,11 @@ h1:hover {
         padding: 1em;
         margin-left: auto;
         cursor: pointer;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 10;
+        color: black;
     }
 
     .close-navbar-btn {
@@ -1637,6 +1642,7 @@ h1:hover {
 }
 
 #popUpContainer {
+    visibility: hidden;
     transform:  translateX(100%) scaleX(0);
     position: fixed;
     height: 100vh;
@@ -1660,6 +1666,7 @@ h1:hover {
     z-index: 1000000000000000000010000000000000000000;
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: -1;
+    backdrop-filter: blur(0.4rem);
 }
 
 .pop-up {
@@ -1672,13 +1679,19 @@ h1:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000000000000000000010000000000000000001;
-    background: var(--accent-color);
+    background: var(--accent-color-not-hover);
     border-radius: 1rem;
     padding: 2rem 4rem;
     color: var(--main-color);
     justify-content: space-between;
     transition: var(--smooth);
+    outline :0.1rem dashed var(--accent-color) ;
+}
 
+.pop-up:hover {
+    transition: var(--smooth);
+    background: var(--accent-color);
+    outline: 0.05rem solid  var(--accent-color) ;
 }
 
 .pop-up-text-container {
@@ -1702,6 +1715,10 @@ h1:hover {
 .pop-up-button:hover {
     border-radius: 1rem;
     cursor: pointer;
+}
+
+.pop-up-button:active {
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }
 
 .pop-up-text {
@@ -1738,7 +1755,7 @@ h1:hover {
 
 @keyframes arrow-left {
     from {
-        transform: translateX(0%) scale(1);
+        transform: translateX(0%) scale(1.05);
         opacity: 1;
     }
 
@@ -1753,3 +1770,29 @@ h1:hover {
     text-shadow: 0 0 0.2rem #f32f2f;
     font-size: 1rem;
 }
+
+@media (max-width: 700px) {
+
+    .pop-up {
+        position: fixed;
+        padding: 1rem !important;
+        width: 90%;
+        height: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--accent-color);
+        outline: none;
+    }
+
+    #popUpOverlay {
+        background: rgba(0, 0, 0, 0.90);
+        height: 100vh;
+    }
+
+
+
+}
+
+
+/*------------------------------------------------------*/
