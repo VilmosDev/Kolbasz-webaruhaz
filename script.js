@@ -88,3 +88,20 @@ function opendropdown() {
 function closedropdown() {
     mobileDropdownLi.classList.remove('show-dropdown');
 }
+
+
+// Pop up
+
+const popUpContainer = document.getElementById('popUpContainer')
+
+function closePopUp() {
+    popUpContainer.classList.remove('showing');
+}
+
+
+
+const popUpOverlay = document.getElementById('popUpOverlay')
+
+function closePopUp2() {
+    popUpOverlay.classList.remove('showing');
+}
