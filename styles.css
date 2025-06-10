@@ -86,8 +86,8 @@ h1:hover {
     hyphens: auto;
     text-align: center;
     font-size: clamp(1.5rem, 8vw, 6rem);
-    line-height: 1.1;
     padding: 0 0.5rem;
+    height: fit-content;
 }
 
 .gif {
