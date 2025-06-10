@@ -119,6 +119,17 @@ h1:hover {
         transform: translateY(0);
         rotate: 15deg;
     }
+
+    50% {
+        transform: translateY(0);
+        rotate: 15deg;
+    }
+
+    50.1% {
+        transform: translateY(-0.5rem);
+        rotate: -15deg;
+    }
+
     100% {
         transform: translateY(-0.5rem);
         rotate: -15deg;
@@ -133,6 +144,17 @@ h1:hover {
         transform: translateY(0);
         rotate: -15deg;
     }
+
+    50% {
+        transform: translateY(0);
+        rotate: -15deg;
+    }
+
+    50.1% {
+        transform: translateY(-0.5rem);
+        rotate: 15deg;
+    }
+
     100% {
         transform: translateY(-0.5rem);
         rotate: 15deg;
@@ -904,7 +926,7 @@ h1:hover {
 
 .product {
     position: relative;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-div-color);
     flex: 3;
     height: 100%;
     margin: auto;
@@ -1006,6 +1028,7 @@ h1:hover {
 
 .product-img {
     width: 100%;
+    height: 25rem;
     max-width: 100%;
     border: 0.1rem solid rgb(175, 175, 175);
 }
