@@ -860,7 +860,7 @@ h1:hover {
 }
 
 #csaptelep {
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 1.85rem;
 }
 
@@ -930,7 +930,7 @@ h1:hover {
     flex: 3;
     height: 100%;
     margin: auto;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -1084,7 +1084,7 @@ h1:hover {
     flex-direction: column;
     align-items: center;
     background: rgba(238, 232, 232, 0.7);
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 
 .products-grid {
@@ -1224,7 +1224,7 @@ h1:hover {
 
 .cool-button-3 {
     border: none;
-    background-color: #515151;
+    background-color: #753a0a;
     /* background-color: rgb(40.91, 36.735, 35.931);  maybe this one would be better */
     color: rgb(255, 240.05, 223.18);
     padding: 1rem 2rem;
