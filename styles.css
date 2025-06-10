@@ -633,6 +633,7 @@ h1:hover {
         top: 0 ;
         right: 0;
         z-index: 10;
+        margin-left: auto;
     }
 
     .last-element {
