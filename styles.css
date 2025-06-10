@@ -83,7 +83,6 @@ h1:hover {
     z-index: 1;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
     text-align: center;
     font-size: clamp(1.5rem, 8vw, 6rem);
     padding: 0 0.5rem;
@@ -97,6 +96,7 @@ h1:hover {
     z-index: 1;
     user-select: none;
     margin: 0 0.5rem;
+    transform-origin: center;
 }
 
 #leftgif {
@@ -904,39 +904,30 @@ h1:hover {
 
 .product {
     position: relative;
-    background-color: #dbdbdb;
-    width: 275%;
-    height: 150%;
-    box-sizing: border-box;
+    background-color: var(--accent-color);
+    flex: 3;
+    height: 100%;
+    margin: auto;
+    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
+    gap: 1rem;
     align-items: center;
     padding: 1rem;
-    margin-left: -87.5%;
     border: 0.1rem solid rgb(175, 175, 175);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 700px) {
     .product {
-        width: 225%;
-        height: 110%;
-        margin-left: -62.5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        width: fit-content;
     }
 
-    .product-description-container {
-        transform: translateY(-25%);
-    }
 
-    .vl {
-        transform: translateY(-0.75%);
-    }
-
-    .cool-button-3-div {
-        margin-left: -35%;
-        position: absolute;
-        bottom: -50%;
-        left: 50%;
-        transform: translateX(-50%);
+    .cool-button-3 {
+        width: fit-content;
+        height: 5rem;
     }
 }
 
@@ -944,9 +935,13 @@ h1:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: 120%;
-    margin-left: -70%;
+    flex: 1;
+    height: fit-content;
+}
+
+.product-description-container {
+    flex: 2;
+    height: 100%;
 }
 
 .product-name {
@@ -983,11 +978,7 @@ h1:hover {
 
 .product-img {
     width: 100%;
-    height: 20rem;
-    /* object-fit: contain; */
     max-width: 100%;
-    /* margin-top: 10%; */
-    /* margin-left: -70%; */
     border: 0.1rem solid rgb(175, 175, 175);
 }
 
@@ -1001,12 +992,8 @@ h1:hover {
 
 .product-divider {
     position: relative;
-    width: 285%;
     border-style: solid;
-    margin-left: -92.5%;
     border-color: #afafaf;
-    margin-top: 67.5%;
-    margin-bottom: 5%;
 }
 
 .webshop-container {
@@ -1040,37 +1027,28 @@ h1:hover {
 
 .products-section {
     width: 70%;
-    flex: 1;
     max-width: 70%;
     padding: 2rem;
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(238, 232, 232, 0.7);
+    border-radius: 1rem;
 }
 
 .products-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 20rem);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 5rem;
     padding: 1rem;
     justify-content: center;
+    position: relative;
 }
 
 .product-desc-name {
     text-align: center;
     font-size: 2rem;
-    margin-top: -17.5%;
-}
-
-.product-description-container {
-    float: right;
-    /* background-color: rgb(227, 227, 227); */
-    width: 60%;
-    height: 100%;
-    margin-top: -53%;
-    margin-left: 33%;
-    /* border: 0.1rem solid rgb(175, 175, 175); */
 }
 
 .product-description {
@@ -1087,7 +1065,7 @@ h1:hover {
 }
 
 .product-description p {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.8rem;
 }
 .comments-section {
     width: 25%;
@@ -1261,10 +1239,8 @@ h1:hover {
 }
 
 .cool-button-3-div {
-    position: absolute;
-    bottom: 4%;
-    left: 50%;
-    transform: translateX(25%);
+    margin: auto;
+    width: 35%;
 }
 
 .cool-button-3:hover .sausage-svg {
