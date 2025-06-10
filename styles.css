@@ -99,6 +99,34 @@ h1:hover {
     margin: 0 0.5rem;
 }
 
+#leftgif {
+    animation: bounce 1s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate ;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+        rotate: 15deg;
+    }
+    100% {
+        transform: translateY(-0.5rem);
+        rotate: -15deg;
+    }
+}
+
+#rightgif {
+    animation: bounce-back 1s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate ;
+}
+@keyframes bounce-back {
+    0% {
+        transform: translateY(0);
+        rotate: -15deg;
+    }
+    100% {
+        transform: translateY(-0.5rem);
+        rotate: 15deg;
+    }
+}
+
 @media (max-width: 900px) {
     .title-wrapper .title {
         font-size: clamp(1.4rem, 7vw, 5rem);
