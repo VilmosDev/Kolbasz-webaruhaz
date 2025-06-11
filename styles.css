@@ -1695,32 +1695,82 @@ h1:hover {
 
 .kolbasz-container {
     width: 80vw;
-    height: 100rem;
+    height: auto;
+    min-height: 30rem;
     background-color: white;
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 1rem;
-     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .kolbasz-container img {
     width: 30%;
-    height: 35%;
-    /* border-radius: 1rem; */
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: auto;
+    margin: 0;
+    flex-shrink: 0;
 }
 
-.kolbasz-nev {
-    text-align: center;
-    font-size: 3.5rem;
-    font-weight: 500;
-    padding-top: 5%;
+.kolbasz-desc {
+    flex: 1;
+    padding: 1rem;
+    margin: 0;
+    margin-right: 10%;
+    text-align: justify;
 }
 
+.kolbasz-name {
+    font-size: 2.5rem;
+    margin: 0 2rem 0 0;
+    display: inline-block;
+}
+
+.kolbasz-title-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.kolbasz-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.sajat-termek {
+    font-weight: bold;
+}
+
+.kolbasz-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.vertical-line {
+    width: 0.1rem;
+    height: 5rem;
+    background-color: var(--main-color);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .kolbasz-container {
+        flex-direction: column;
+        width: 90vw;
+        padding: 1rem;
+    }
+    
+    .kolbasz-container img {
+        width: 100%;
+    }
+    
+    .kolbasz-desc {
+        width: 100%;
+    }
+}
 
 /*-------------------Kezdő értesítés-------------------*/
 
@@ -1963,3 +2013,10 @@ h1:hover {
 }
 
 /*------------------------------------------------------*/
+
+.sajat-termek {
+    font-weight: bold;
+    display: block;
+    /* margin-bottom: 0.5rem; */
+}
+

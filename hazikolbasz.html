@@ -1,22 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Házi Kolbász | Tóth Geri Kolbászboltja</title>    
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./kepek/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+
+<div class="container">
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+
+    <button class="open-navbar-btn" id="cart-btn">
+        <a href="./cart.html">
+           <i class="fa fa-shopping-cart cart"></i>
+        </a>
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow"
+                         onclick="opendropdown();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                    <ul class="mobile-dropdown">
+                        <li><a href="./kolbasz.html">Kolbászok</a></li>
+                        <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                    </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+
+</div>
+
+
+
+
+
+    <!-- titkos -->
+    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
+
+    <!-- title  -->
+    <div class="title-wrapper">
+            <img src="./kepek/kodifej.png" alt="" class="gif" id="leftgif">
+            <p class="title">Üdvözöllek <br> Tóth Geri Kolbászboltjában!</p>
+            <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
+            <a href="./csaptelepek.html"><p class="subtitle csaptelep">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+            <img src="./kepek/favicon.png" alt="" class="gif" id="rightgif">
+
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="fooldal">Főoldal</a></li>
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn termekeink" id="termekeink">Termékeink</button>
+                <div class="dropdown-content" style="font-weight: 100;" id="drop-kolbi">
+                    <a href="./kolbasz.html" class="termek">Kolbászok, hurkák, virslik</a>
+                    <a href="./csaptelepek.html" class="termek">Csaptelepek (ÚJ!)</a>
+                </div>
+                </div>
+            </li>
+            <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
+            <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
+            <li><a href="./tgeri.html">Extra</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- banner -->
+<img src="./kepek/kolbaszbolt_gerivel.png" alt="tgeri" class="geriboy">
+
+<div class="main_dropdown_div">
+    <p class="egykerdes">Van <b>EGY KÉRDÉSE?</b> ↓</p>
+    <div class="dropdown"> 
+        <button class="dropbtn">Elérhetőségeink</button>
+        <div class="dropdown-content">
+            <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
+            <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
+            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: kolbaszshop@gmail.com</a>
+        </div>
+    </div>
+    </div>
     <div class="title-wrapper">
         <p class="title">KOLBÁSZ</p>
         <p class="subtitle">- Saját Termék -</p>
     </div>
     <div class="kolbasz-container">
-        <p class="kolbasz-nev">
-            Kolbasz nev
-        </p>
-        <img src="../kepek/kolbaszok/hazikolbi.jpg" alt="">
+        <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kolbasz">
+        <div class="kolbasz-title-container">
+            <div class="kolbasz-title">
+                <span class="sajat-termek">- Saját Termék -</span>
+                <p class="kolbasz-name">Házi Kolbász</p>
+            </div>
+            <div class="vertical-line"></div>
+        </div>
+        <div class="kolbasz-desc">
+            <p>Minden egyes darabot gondos odafigyeléssel, házon belül készítünk, egy olyan recept alapján, amit hosszú hónapokon át finomítottunk – éppen azért, hogy mindenki megtalálja benne a saját kedvenc ízjegyét.</p><br>
+
+            <p>A kolbász ízvilága kifinomult, mégis karakteres – enyhén füstös, kellemesen fűszeres, de nem tolakodó. Pont olyan, amit szívesen megosztanál valakivel... vagy nem.</p><br>
+                            
+            <p>Tálalva extra mustáros házi szósszal, ami egy kicsit édeskés, egy kicsit pikáns, de teljesen egyedi. Mellé friss, roppanós zöldségek, némi savanyított finomság (ami szezonálisan változik), és 1–2 szelet puha, rusztikus kenyér, az adag nagyságától függően.</p><br>
+        </div>
     </div>
 </body>
 </html>
+
+
+
+
+
