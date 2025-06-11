@@ -1294,7 +1294,7 @@ h1:hover {
     width: 35%;
 }
 
-.cool-button-3:hover .sausage-svg {
+.cool-button-3:hover .sausage-svg .cart-svg{
     transform: translateX(-300%) scaleX(0);
     opacity: 0;
 }
@@ -1407,7 +1407,7 @@ h1:hover {
     max-height: 20vw;
 }
 
-.sausage-svg {
+.sausage-svg .cart-svg{
     height: 2rem;
     transition: var(--smooth);
     transform: translateX(0%) scaleX(1);
