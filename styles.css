@@ -65,20 +65,20 @@ h1:hover {
 }
 
 .title-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
     width: 100%;
     margin: 2rem auto 5rem;
     position: relative;
     padding: 0 1rem;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
     font-weight: bold;
+    min-height: 8rem;
+    text-align: center;
 }
 
 .title-wrapper .title {
-    flex: 1;
+    display: inline-block;
     margin: 0;
     z-index: 1;
     word-wrap: break-word;
@@ -87,6 +87,18 @@ h1:hover {
     font-size: clamp(1.5rem, 8vw, 6rem);
     padding: 0 0.5rem;
     height: fit-content;
+}
+
+.title-wrapper .subtitle {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    display: block;
 }
 
 .gif {
@@ -107,6 +119,17 @@ h1:hover {
         transform: translateY(0);
         rotate: 15deg;
     }
+
+    50% {
+        transform: translateY(0);
+        rotate: 15deg;
+    }
+
+    50.1% {
+        transform: translateY(-0.5rem);
+        rotate: -15deg;
+    }
+
     100% {
         transform: translateY(-0.5rem);
         rotate: -15deg;
@@ -121,6 +144,17 @@ h1:hover {
         transform: translateY(0);
         rotate: -15deg;
     }
+
+    50% {
+        transform: translateY(0);
+        rotate: -15deg;
+    }
+
+    50.1% {
+        transform: translateY(-0.5rem);
+        rotate: 15deg;
+    }
+
     100% {
         transform: translateY(-0.5rem);
         rotate: 15deg;
@@ -169,18 +203,6 @@ h1:hover {
     position: static;
     transform: none;
 }
-
-.title-wrapper .subtitle {
-    position: absolute;
-    bottom: -5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    transform-origin: center;
-    width: 100%;
-    text-align: center;
-}
-
-
 
 /* Elérhetőségeink dropdown */
 .main_dropdown_div {
@@ -838,7 +860,7 @@ h1:hover {
 }
 
 #csaptelep {
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 1.85rem;
 }
 
@@ -904,11 +926,11 @@ h1:hover {
 
 .product {
     position: relative;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-div-color);
     flex: 3;
     height: 100%;
     margin: auto;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -928,6 +950,34 @@ h1:hover {
     .cool-button-3 {
         width: fit-content;
         height: 5rem;
+    }
+
+
+
+
+}
+
+@media (max-width: 1250px) {
+    .product {
+        width: 200%;
+        height: 100%;
+        margin-left: -50%;
+    }
+
+    .product-description-container {
+        transform: translateY(-25%);
+    }
+
+    .vl {
+        transform: translateY(-0.75%);
+    }
+
+    .cool-button-3-div {
+        margin-left: -35%;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -978,6 +1028,7 @@ h1:hover {
 
 .product-img {
     width: 100%;
+    height: 25rem;
     max-width: 100%;
     border: 0.1rem solid rgb(175, 175, 175);
 }
@@ -1033,7 +1084,7 @@ h1:hover {
     flex-direction: column;
     align-items: center;
     background: rgba(238, 232, 232, 0.7);
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 
 .products-grid {
@@ -1173,7 +1224,7 @@ h1:hover {
 
 .cool-button-3 {
     border: none;
-    background-color: #515151;
+    background-color: #753a0a;
     /* background-color: rgb(40.91, 36.735, 35.931);  maybe this one would be better */
     color: rgb(255, 240.05, 223.18);
     padding: 1rem 2rem;
@@ -1243,7 +1294,7 @@ h1:hover {
     width: 35%;
 }
 
-.cool-button-3:hover .sausage-svg {
+.cool-button-3:hover .sausage-svg, .cart-svg{
     transform: translateX(-300%) scaleX(0);
     opacity: 0;
 }
@@ -1356,7 +1407,7 @@ h1:hover {
     max-height: 20vw;
 }
 
-.sausage-svg {
+.sausage-svg{
     height: 2rem;
     transition: var(--smooth);
     transform: translateX(0%) scaleX(1);
@@ -1364,7 +1415,14 @@ h1:hover {
     filter: invert(0.7) brightness(1.3) sepia(0.2) saturate(2) hue-rotate(350deg);
 }
 
-
+.cart-svg{
+    height: 2rem;
+    transition: var(--smooth);
+    transform: translateX(0%) scaleX(1);
+    transform-origin: right;
+    /* filter: invert(0.7) brightness(1.3) sepia(0.2) saturate(2) hue-rotate(350deg); */
+    z-index: 5000;
+}
 
 @media (max-width: 700px) {
     .partners-item-img {
@@ -1643,33 +1701,83 @@ h1:hover {
 }
 
 .kolbasz-container {
-    width: 100rem;
-    height: 100rem;
+    width: 80vw;
+    height: auto;
+    min-height: 30rem;
     background-color: white;
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 1rem;
-     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .kolbasz-container img {
     width: 30%;
-    height: 35%;
-    /* border-radius: 1rem; */
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: auto;
+    margin: 0;
+    flex-shrink: 0;
 }
 
-.kolbasz-nev {
-    text-align: center;
-    font-size: 3.5rem;
-    font-weight: 500;
-    padding-top: 5%;
+.kolbasz-desc {
+    flex: 1;
+    padding: 1rem;
+    margin: 0;
+    margin-right: 10%;
+    text-align: justify;
 }
 
+.kolbasz-name {
+    font-size: 2.5rem;
+    margin: 0 2rem 0 0;
+    display: inline-block;
+}
+
+.kolbasz-title-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.kolbasz-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.sajat-termek {
+    font-weight: bold;
+}
+
+.kolbasz-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.vertical-line {
+    width: 0.1rem;
+    height: 5rem;
+    background-color: var(--main-color);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .kolbasz-container {
+        flex-direction: column;
+        width: 90vw;
+        padding: 1rem;
+    }
+    
+    .kolbasz-container img {
+        width: 100%;
+    }
+    
+    .kolbasz-desc {
+        width: 100%;
+    }
+}
 
 /*-------------------Kezdő értesítés-------------------*/
 
@@ -1912,3 +2020,10 @@ h1:hover {
 }
 
 /*------------------------------------------------------*/
+
+.sajat-termek {
+    font-weight: bold;
+    display: block;
+    /* margin-bottom: 0.5rem; */
+}
+
