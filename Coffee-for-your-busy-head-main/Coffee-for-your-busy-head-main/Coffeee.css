@@ -1,0 +1,27 @@
+body {
+    background-size: cover;
+    background-image: url(backgroundcoffe.jpg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#header {
+    padding: 10;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(195,171,136,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: beige;
+    width: 500px;
+    height: 150px;
+    font-size: 45px;
+    border-radius: 30px;
+}
+.cards {
+    display: flex;
+    gap: 70px;
+}
+.coffecard {
+    margin-left: 20px;
+}
+  
