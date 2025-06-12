@@ -12,7 +12,36 @@
 </head>
 <body>
 
+
+
 <div class="container">
+    <div class="kosar">
+        <div class="kosar-title">
+            Kosár
+            <hr class="kosar-hr">
+            <div class="tartalom">
+                <div class="kosar-box">
+                    <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kosar-img">
+                    <div class="kosar-desc">
+                        <p class="kosar-prod-name">Házi Kolbász</p>
+                        <span class="kosar-ar">3.990- Ft</span>
+                        <div class="kosar-mennyiseg">
+                            <button id="sub">-</button>
+                            <span class="kosar-szam">1</span>
+                            <button id="add">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash kosar-torles"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kosar-veg">
+            <div class="osszesen">Összesen</div>
+            <div class="osszeg">0- Ft</div>
+        </div>
+        <button class="vevo-gomb">Kifizetés</button>
+        <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+    </div>
 
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
@@ -145,7 +174,7 @@
         </div>
     </div>
        
-    </div>
+</div>
 </body>
 </html>
 
