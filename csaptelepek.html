@@ -4,12 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Csaptelepek | Tóth Geri Kolbászboltja</title>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+<div class="container">
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+
+    <button class="open-navbar-btn" id="cart-btn">
+        <a href="./cart.html">
+            <i class="fa fa-shopping-cart cart"></i>
+        </a>
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
+                    <i class="fa-solid fa-x fa-xl"></i>
+                </button></li>
+            <li class="home-li" id=""><a href="./index.html">Főoldal</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow"
+                         onclick="opendropdown();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                <ul class="mobile-dropdown">
+                    <li><a href="./kolbasz.html" id="active-link">Kolbászok</a></li>
+                    <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+
+</div>
+
+
     <!-- titkos -->
     <img src="./kepek/a kis tizes.jpg" alt="" class="tiz">
 

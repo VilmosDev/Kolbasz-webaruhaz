@@ -659,6 +659,7 @@ h1:hover {
         margin-left: auto;
     }
 
+
     .last-element {
         border-bottom: 2px solid var(--main-color) !important;
         border-bottom-left-radius: 0.8em;
