@@ -324,7 +324,7 @@ h1:hover {
 .geriboy {
     width: 100%;
     height: 25rem;
-    z-index: -1;
+    z-index: 1;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -1741,6 +1741,7 @@ h1:hover {
     font-size: 1.85rem;
     margin: 0 2rem 0 0;
     display: inline-block;
+    /* text-align: center; */
 }
 
 .kolbasz-title-container {
@@ -1769,7 +1770,7 @@ h1:hover {
 .sajat-termek {
     font-weight: bold;
     display: block;
-    /* margin-bottom: 0.5rem; */
+    font-size: 1.1rem;
 }
 
 .cool-button-3 i.fa-shopping-cart {
