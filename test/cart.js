@@ -46,26 +46,96 @@ for (let item of cartItems){
 </div>
 <i class="ri-delete-bin-line cart-remove"></i>
   `;
-  cartContent.appendChild(cartBox);
+    cartContent.appendChild(cartBox);
 
-  cartBox.querySelector(".cart-remove").addEventListener("click", ()=> {
-    cartBox.remove();
-  });
-  cartBox.querySelector(".cart-quantity").addEventListener("click", event => {
-  const numberElement = cartBox.querySelector(".number");
-  const decrementButton = cartBox.querySelector("#decrement");
-  let quantity = numberElement.textContent;
+    cartBox.querySelector(".cart-remove").addEventListener("click", ()=> {
+      cartBox.remove();
+      updateCartCount(-1)
+      updateTotalPrice()
+    });
+    cartBox.querySelector(".cart-quantity").addEventListener("click", event => {
+    const numberElement = cartBox.querySelector(".number");
+    const decrementButton = cartBox.querySelector("#decrement");
+    let quantity = numberElement.textContent;
 
-  if (event.target.id === "decrement" && quantity > 1) {
-    quantity--;
-    if (quantity === 1) {
-      decrementButton.style.color = "#999";
+    if (event.target.id === "decrement" && quantity > 1) {
+      quantity--;
+      if (quantity === 1) {
+        decrementButton.style.color = "#999";
+      }
+    } else if (event.target.id === "increment") {
+      quantity++;
+      decrementButton.style.color = "#333";
     }
-  } else if (event.target.id === "increment") {
-    quantity++;
-    decrementButton.style.color = "#333";
-  }
 
-  numberElement.textContent = quantity;
-})
+    numberElement.textContent = quantity;
+    updateTotalPrice()
+  })
+updateCartCount(1)
+
+  updateTotalPrice()
+  };
+
+const updateTotalPrice = () => {
+  const totalPriceElement = document.querySelector(".total-price");
+  const cartBoxes = cartContent.querySelectorAll(".cart-box");
+  let total = 0;
+
+  cartBoxes.forEach(cartBox => {
+    const priceElement = cartBox.querySelector(".cart-price");
+    const quantityElement = cartBox.querySelector(".number");
+
+    const price = priceElement.textContent.replace("", "Ft");//lehet hogy e miattt rosz lesz
+    const quantity = quantityElement.textContent;
+
+    total += price * quantity;
+  });
+
+  totalPriceElement.textContent = `${total}Ft`;
 };
+
+let cartItemCount =0
+const updateCartCount=change=> {
+const cartItemCountBadge = document.querySelector(".cart-item-count");
+cartItemCount += change;
+    if (cartItemCount >0){
+      cartItemCountBadge.style.visibility= "viseble"
+    cartItemCountBadge.textContent =cartItemCount
+    }
+    else{
+      cartItemCountBadge.style.visibility= "hidden"
+    cartItemCountBadge.textContent =""
+    };
+
+};
+
+
+
+const buyNowButton = document.querySelector(".btn-buy");
+buyNowButton.addEventListener("click", () => {
+    const cartBoxes = cartContent.querySelectorAll(".cart-box");
+    if (cartBoxes.length == 0) {
+        alert("Üres a kosarad.");
+        return;
+    }
+
+    cartBoxes.forEach(cartBox => cartBox.remove());
+    {
+        cartItemCount = 0;
+        updateCartCount(0);
+
+        updateTotalPrice();
+
+        alert("Köszönjük hogy Toth Geri kkolbászboltjánál vásárolt!");
+    }
+});
+
+
+
+
+
+
+
+
+
+  
