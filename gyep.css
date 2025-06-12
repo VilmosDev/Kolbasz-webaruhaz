@@ -167,3 +167,13 @@ html {
 .back-to-home-page-button:hover .fa-solid.fa-arrow-left {
   transform: translateX(0) ;
 }
+
+
+.kolbasz-description {
+  text-align: center;
+}
+
+.kolbasz-zsir-description {
+  text-align: center;
+  font-size: 1.5rem;
+}
