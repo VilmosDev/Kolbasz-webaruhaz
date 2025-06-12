@@ -19,9 +19,10 @@
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-           <i class="fa fa-shopping-cart cart"></i>
-        </a>
+        <p class="cart-p">
+           <i class="fa fa-shopping-cart mobile-cart" onclick=""></i>
+           <span class="cart-item-count"></span>
+        </p>
 
     </button>
 
@@ -89,7 +90,13 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+            <li>
+                <a href="#">
+                <i class="fa fa-shopping-cart cart" style="font-size: 40px;">
+                    <span class="cart-item-count"></span>
+                </i>
+            </a>
+            </li>
         </ul>
     </nav>
 

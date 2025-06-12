@@ -105,3 +105,6 @@ const popUpOverlay = document.getElementById('popUpOverlay')
 function closePopUp2() {
     popUpOverlay.classList.remove('showing');
 }
+
+
+// cart ---------------------------------------
