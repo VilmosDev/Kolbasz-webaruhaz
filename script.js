@@ -105,3 +105,30 @@ const popUpOverlay = document.getElementById('popUpOverlay')
 function closePopUp2() {
     popUpOverlay.classList.remove('showing');
 }
+
+
+// cart ---------------------------------------
+
+// Cart functionality
+const cartBtn = document.querySelector('.cart');
+const cart = document.querySelector('.kosar');
+const closeCart = document.querySelector('#kosar-bezaras');
+
+// Open cart
+cartBtn.addEventListener('click', () => {
+    cart.classList.add('show');
+});
+
+// Close cart
+closeCart.addEventListener('click', () => {
+    cart.classList.remove('show');
+});
+
+// Close cart when clicking outside
+document.addEventListener('click', (e) => {
+    if (!cart.contains(e.target) && !cartBtn.contains(e.target)) {
+        cart.classList.remove('show');
+    }
+});
+
+
