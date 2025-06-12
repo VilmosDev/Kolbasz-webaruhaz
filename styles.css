@@ -676,7 +676,7 @@ h1:hover {
 .kosar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 22.5rem;
     height: 100%;
     background-color: #fff;
@@ -684,6 +684,11 @@ h1:hover {
     padding: 2rem 1rem 4rem;
     z-index: 100;
     overflow: auto;
+    transition: right 0.3s ease-in-out;
+}
+
+.kosar.show {
+    right: 0;
 }
 
 .kosar-title {
@@ -759,7 +764,7 @@ h1:hover {
 .kosar-torles {
     font-size: 2.5rem;
     cursor: pointer;
-    scale: 1.5;
+    /* scale: 1.5; */
     margin-bottom: 10%;
     color: #707070;
 }
