@@ -12,6 +12,21 @@
 </head>
 <body>
 
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
+
 <div class="container">
 
     <button class="open-navbar-btn" onclick="openNavbar()">
@@ -19,10 +34,8 @@
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-            <i class="fa fa-shopping-cart cart"></i>
-        </a>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -77,7 +90,7 @@
             <li><a href="./index.html" id="fooldal">Főoldal</a></li>
             <li>
                 <div class="dropdown">
-                <button class="dropbtn termekeink" id="termekeink" onclick="termekekRedirect()">Termékeink</button>
+                <button class="dropbtn termekeink" id="termekeink">Termékeink</button>
                 <div class="dropdown-content" style="font-weight: 100;" id="drop-kolbi">
                     <a href="./kolbasz.html" class="termek">Kolbászok, hurkák, virslik</a>
                     <a href="./csaptelepek.html" class="termek">Csaptelepek (ÚJ!)</a>
@@ -87,7 +100,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart"></i></a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -204,7 +217,7 @@
                     <div class="product-container">
                         <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.jpg" alt="Virsli Disznótorral">
                         <p class="product-name"><b>- Saját Termék! - </b><br>Virsli Disznótorral</p> <br>
-                        <span class="product-price">3.290- Ft</span>
+                        <span class="product-price">4.990- Ft</span>
                     </div>
                     <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
@@ -307,7 +320,7 @@
                             </div>
                             
                             <div class="cool-button-3-div">
-                                <a href="https://www.google.com" class="cool-button-3">
+                                <a href="./negyevszak.html" class="cool-button-3">
                                     <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                     <span class="button-text">Tudj meg többet</span>
                                     <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

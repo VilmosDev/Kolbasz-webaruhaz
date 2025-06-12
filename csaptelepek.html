@@ -12,6 +12,21 @@
 </head>
 <body>
 
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
+
 <div class="container">
 
     <button class="open-navbar-btn" onclick="openNavbar()">
@@ -19,10 +34,8 @@
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-            <i class="fa fa-shopping-cart cart"></i>
-        </a>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -31,7 +44,7 @@
                 <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
                     <i class="fa-solid fa-x fa-xl"></i>
                 </button></li>
-            <li class="home-li" id=""><a href="./index.html">Főoldal</a></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
             <li id="mobile-dropdown-li" onclick="opendropdown()">
                 <b id="mobile-dropdown-li-head">
                     Termékeink
@@ -44,7 +57,7 @@
                     </div>
                 </b>
                 <ul class="mobile-dropdown">
-                    <li><a href="./kolbasz.html" id="active-link">Kolbászok</a></li>
+                    <li><a href="./kolbasz.html">Kolbászok</a></li>
                     <li><a href="./csaptelepek.html">Csaptelepek</a></li>
                 </ul>
             </li>
@@ -86,7 +99,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -127,5 +140,5 @@
         <!-- Webshop -->
         <div class="title-wrapper">
             <p class="title" style="margin-top: 5%;">Sajnos a csaptelep webshopunk még készületben van!</p> 
-            <p class="csaptelep-sub">Ennek ellenére a fizikai üzleteinkben ugyan úgy elérhetőek! Tehát szigorúan egy finom kolbász után nyugodtan tudnak a legjobb csaptelepek közül válogatni!</p>
+            <p class="csaptelep-sub" style="margin-bottom: 25rem;">Ennek ellenére a fizikai üzleteinkben ugyan úgy elérhetőek! Tehát csak <u>szigorúan</u> egy finom kolbász után nyugodtan tudnak a legjobb csaptelepek közül válogatni!</p>
         </div>

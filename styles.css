@@ -678,17 +678,17 @@ h1:hover {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 22.5rem;
+    width: 25rem;
     height: 100%;
     background-color: #fff;
     box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem 1rem 4rem;
-    z-index: 100;
+    z-index: 100000;
     overflow: auto;
     transition: right 0.3s ease-in-out;
 }
 
-.kosar.show {
+.kosar.active {
     right: 0;
 }
 
@@ -804,6 +804,22 @@ h1:hover {
     cursor: pointer;
 }
 
+.cart-item-count {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 102, 0);
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
 
 /*--------------------------------------------------------------------*/
 .cart {
@@ -812,6 +828,7 @@ h1:hover {
     align-items: center;
     justify-content: center;
     transform: translateX(-0.1rem);
+    cursor: pointer;
 }
 
 .mobile-cart {
@@ -841,7 +858,7 @@ h1:hover {
 
 /* titkos */
 .tiz {
-    width: 1px;
+    width: 10px;
     transition: 20s;
 }
 
@@ -2209,18 +2226,7 @@ h1:hover {
     text-align: center;
 }
 
-.cart-item-count {
-    position: absolute;
-    top: 0;
-    right: -6px;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(255, 102, 0);
-    border-radius: 50%;
-    font-size: 12px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
+.fs-name {
+    font-size: 2rem;
+    font-weight: 400;
 }

@@ -12,18 +12,29 @@
 </head>
 <body>
 
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
 
 <div class="container">
-
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-            <i class="fa fa-shopping-cart cart"></i>
-        </a>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -32,7 +43,7 @@
                 <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
                     <i class="fa-solid fa-x fa-xl"></i>
                 </button></li>
-            <li class="home-li" id=""><a href="./index.html">Főoldal</a></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
             <li id="mobile-dropdown-li" onclick="opendropdown()">
                 <b id="mobile-dropdown-li-head">
                     Termékeink
@@ -51,14 +62,12 @@
             </li>
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
-            <li id="active-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
         </ul>
     </nav>
 
     <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
-
 </div>
-
 
 
     <!-- titkos -->

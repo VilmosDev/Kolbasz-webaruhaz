@@ -19,10 +19,8 @@
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-           <i class="fa fa-shopping-cart cart"></i>
-        </a>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -51,6 +49,7 @@
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
             <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -129,16 +128,33 @@
                             <p>Tálalási tipp: kézműves mustárral, házi savanyúsággal (uborka, lilahagyma), és egy jó adag frissen sült krumplival.</p>
                         <br>
          <div class="cool-button-3-div">
-            <a href="https://www.google.com" class="cool-button-3">
+            <button id="kosarba" class="cool-button-3">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="button-text">Kosárba</span>
                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
                 </svg>
-            </a>
+            </button>
         </div></div>
        
     </div>
+</div>
+
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
 </body>
 </html>
 

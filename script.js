@@ -107,28 +107,164 @@ function closePopUp2() {
 }
 
 
-// cart ---------------------------------------
+// cart ------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const cartIcons = document.querySelectorAll('.fa-shopping-cart.cart');
+    const cart = document.querySelector('.kosar');
+    const closeCart = document.querySelector('#kosar-bezaras');
+    const cartContent = document.querySelector(".tartalom");
+    const cartItemCountBadge = document.querySelector('.cart-item-count');
+    const purchaseButton = document.querySelector('.vevo-gomb');
+    
+    // Load cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
-// Cart functionality
-const cartBtn = document.querySelector('.cart');
-const cart = document.querySelector('.kosar');
-const closeCart = document.querySelector('#kosar-bezaras');
+    // Update cart count badge on load
+    updateCartCountBadge();
 
-// Open cart
-cartBtn.addEventListener('click', () => {
-    cart.classList.add('show');
-});
-
-// Close cart
-closeCart.addEventListener('click', () => {
-    cart.classList.remove('show');
-});
-
-// Close cart when clicking outside
-document.addEventListener('click', (e) => {
-    if (!cart.contains(e.target) && !cartBtn.contains(e.target)) {
-        cart.classList.remove('show');
+    // Fizetés
+    if (purchaseButton) {
+        purchaseButton.addEventListener('click', () => {
+            if (cartItems.length > 0) {
+                alert('Köszönjük a vásárlást! Jóétvágyat!');
+                cartItems = [];
+                saveCartToStorage();
+                updateCart();
+                updateCartCount(-cartItemCount);
+                cart.classList.remove('active');
+            } else {
+                alert('A kosár üres!');
+            }
+        });
     }
+
+    // Kosár megnyitás
+    cartIcons.forEach(cartIcon => {
+        cartIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            cart.classList.add('active');
+        });
+    });
+
+    // Kosár bezárás
+    closeCart.addEventListener('click', () => {
+        cart.classList.remove('active');
+    });
+
+    // Kosárhoz adás
+    function addToCart(product) {
+        const productImg = product.querySelector('img').src;
+        const productName = product.querySelector('.kolbasz-name').textContent;
+        const productPrice = product.querySelector('.kolbasz-price').textContent;
+
+        // Benne van-e a termék már a kosárban
+        const existingItems = cartItems.filter(item => item.name === productName);
+        if (existingItems.length > 0) {
+            alert("Ez a termék már benne van a kosárban!🌭");
+            return;
+        }
+
+        const cartItem = {
+            img: productImg,
+            name: productName,
+            price: productPrice,
+            quantity: 1
+        };
+
+        cartItems.push(cartItem);
+        saveCartToStorage();
+        updateCart();
+        updateCartCount(1);
+        cart.classList.add('active');
+    }
+
+    // Item megjelenítése htmlben
+    function updateCart() {
+        cartContent.innerHTML = '';
+        let total = 0;
+        let itemCount = 0;
+
+        cartItems.forEach((item, index) => {
+            const cartBox = document.createElement("div");
+            cartBox.classList.add("kosar-box");
+            cartBox.innerHTML = `
+                <img src="${item.img}" alt="" class="kosar-img">
+                <div class="kosar-desc">
+                    <p class="kosar-prod-name">${item.name}</p>
+                    <span class="kosar-ar">${item.price}</span>
+                    <div class="kosar-mennyiseg">
+                        <button id="sub" onclick="updateQuantity(${index}, -1)">-</button>
+                        <span class="kosar-szam">${item.quantity}</span>
+                        <button id="add" onclick="updateQuantity(${index}, 1)">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash kosar-torles" onclick="removeItem(${index})"></i>
+            `;
+            cartContent.appendChild(cartBox);
+            
+            total += parseInt(item.price.replace(/[^0-9]/g, '')) * item.quantity;
+            itemCount += item.quantity;
+        });
+
+        document.querySelector('.osszeg').textContent = `${total}- Ft`;
+        updateCartCountBadge();
+    }
+
+    // Item mennyiség frissítése
+    window.updateQuantity = function(index, change) {
+        cartItems[index].quantity = Math.max(1, cartItems[index].quantity + change);
+        saveCartToStorage();
+        updateCart();
+        updateCartCount(change);
+    }
+
+    // Item törlés
+    window.removeItem = function(index) {
+        const removedQuantity = cartItems[index].quantity;
+        cartItems.splice(index, 1);
+        saveCartToStorage();
+        updateCart();
+        updateCartCount(-removedQuantity);
+    }
+
+    // Kosárba gombra kattintás érzékelése
+    const kosarbaButton = document.getElementById('kosarba');
+    if (kosarbaButton) {
+        kosarbaButton.addEventListener('click', function() {
+            const product = document.querySelector('.kolbasz-container');
+            addToCart(product);
+        });
+    }
+
+    // Save cart to localStorage
+    function saveCartToStorage() {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+
+    // Update cart count badge
+    function updateCartCountBadge() {
+        const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        cartItemCountBadge.textContent = totalItems;
+        cartItemCountBadge.style.visibility = totalItems > 0 ? 'visible' : 'hidden';
+    }
+
+    // Update cart count
+    function updateCartCount(change) {
+        cartItemCount += change;
+        updateCartCountBadge();
+    }
+
+    // Initial cart update
+    updateCart();
 });
+
+// Kívül kattintás bezárja a kosarat - a mennyiség hozzáadás is bezárja a kosarat azért van kikommentelve
+// document.addEventListener('click', (e) => {
+//     if (!cart.contains(e.target) && !cartIcon.contains(e.target)) {
+//         cart.classList.remove('active');
+//     }
+// });
 
 

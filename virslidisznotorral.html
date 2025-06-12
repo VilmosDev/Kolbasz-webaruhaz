@@ -19,10 +19,8 @@
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-           <i class="fa fa-shopping-cart cart"></i>
-        </a>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -51,6 +49,7 @@
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
             <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -117,30 +116,45 @@
             <div class="kolbasz-title">
                 <span class="sajat-termek">- Saját Termék -</span>
                 <p class="kolbasz-name">Virsli Disznótorral</p>
-                <p class="kolbasz-price">3.290- Ft</p>
+                <p class="kolbasz-price">4.990- Ft</p>
             </div>
             <div class="vertical-line"></div>
         </div>
         <div class="kolbasz-desc">
-            <p>Az ünnep minden falatja: a Virsli Disznótorral visszarepít a falusi disznótor hangulatába, ahol mindenki együtt nevet, eszik és élvezi az életet. A kulcs a minőségi, lédús virsliben rejlik, amit gondosan füstölünk, hogy a füst íze ne nyomja el a hús zamatait.</p><br>
+            <p>A Virsli Disznótorral nem csupán egy kolbász – ez egy teljes élmény. Minden falatnál érzed, hogy ez nem csak étel: ez egyfajta utazás az ízek világában, egy apró, de jelentős döntés a jobb ízek felé.</p><br>
 
-                            <p>A virsli mellett omlós, ropogós szalonnaszeletek, édes hagymalekvár csipetnyi köménymaggal és friss, héjában sült burgonyaszeletek várnak. Az erdei gombaöntet, amellyel koronázunk, mély, földes aromákat hoz, míg a ropogós kenyérrel és házi kovászos uborkával az élmény minden eleme harmonikusan illeszkedik
+            <p>Kívül enyhén kérges, belül omlós és szaftos, az ízvilága karakteres, de mégis játékos. Pont olyan, amit bekapsz két nagyobb falat között, vagy amikor csak egy kis kolbászos nasi kell, hogy átvészeld a napot.</p><br>
 
-</p><br>
-
-                            <p>Tálalási tipp: rendezd el egy nagy, közös tálban, hogy mindenki kedve szerint halászhasson a legjobb falatokból.</p>
-                        <br>
-         <div class="cool-button-3-div">
-            <a href="https://www.google.com" class="cool-button-3">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="button-text">Kosárba</span>
-                <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                </svg>
-            </a>
-        </div></div>
-       
+            <p>Ha pedig komolyabban gondolod, teljes menüben is kérhető, ilyenkor mellé ropogós virsli is érkezik, sőt, egy opcionális véres hurka is felkerülhet a tányérra – csak a bátraknak. A kísérő továbbra is ugyanaz: házi mustáros szósz, friss zöldségek, és a jól bevált puha, rusztikus kenyér.</p>
+            <br>
+            <div class="cool-button-3-div">
+                <button id="kosarba" class="cool-button-3">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="button-text">Kosárba</span>
+                    <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
 </body>
 </html>
 

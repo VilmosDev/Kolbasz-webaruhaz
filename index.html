@@ -49,17 +49,43 @@
     </div>
 
 </div>
-
+<div class="kosar">
+        <div class="kosar-title">
+            Kosár
+            <hr class="kosar-hr">
+            <div class="tartalom">
+                <!-- <div class="kosar-box">
+                    <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kosar-img">
+                    <div class="kosar-desc">
+                        <p class="kosar-prod-name">Házi Kolbász</p>
+                        <span class="kosar-ar">3.990- Ft</span>
+                        <div class="kosar-mennyiseg">
+                            <button id="sub">-</button>
+                            <span class="kosar-szam">1</span>
+                            <button id="add">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash kosar-torles"></i>
+                </div> -->
+            </div>
+        </div>
+        <div class="kosar-veg">
+            <div class="osszesen">Összesen</div>
+            <div class="osszeg">0- Ft</div>
+        </div>
+        <button class="vevo-gomb">Fizetés</button>
+        <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+    </div>
 <div class="container">
+    
 
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <a href="./cart.html">
-           <i class="fa fa-shopping-cart cart"></i>
-        </a>
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -100,7 +126,7 @@
 
 
     <!-- titkos -->
-    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
+    <!-- <img src="./kepek/a kis tizes.jpg" alt="" class="tiz"> -->
 
     <!-- title  -->
     <div class="title-wrapper">
@@ -128,7 +154,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
