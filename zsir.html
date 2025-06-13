@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tóth Geri Féle Kolbász Zsír Tompahát Módra | Tóth Geri Kolbászboltja</title>    
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./kepek/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+ <div class="kosar">
+        <div class="kosar-title">
+            Kosár
+            <hr class="kosar-hr">
+            <div class="tartalom">
+                <!-- <div class="kosar-box">
+                    <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kosar-img">
+                    <div class="kosar-desc">
+                        <p class="kosar-prod-name">Házi Kolbász</p>
+                        <span class="kosar-ar">3.990- Ft</span>
+                        <div class="kosar-mennyiseg">
+                            <button id="sub">-</button>
+                            <span class="kosar-szam">1</span>
+                            <button id="add">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash kosar-torles"></i>
+                </div> -->
+            </div>
+        </div>
+        <div class="kosar-veg">
+            <div class="osszesen">Összesen</div>
+            <div class="osszeg">0- Ft</div>
+        </div>
+        <button class="vevo-gomb">Fizetés</button>
+        <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+    </div>
+
+<div class="container">
+   
+
+    <button class="open-navbar-btn" onclick="openNavbar()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+
+    <button class="open-navbar-btn" id="cart-btn">
+        <p class="cart-p">
+           <i class="fa fa-shopping-cart mobile-cart" onclick=""></i>
+           <span class="cart-item-count"></span>
+        </p>
+
+    </button>
+
+    <nav class="" id="navbar2">
+        <ul>
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
+            <li id="mobile-dropdown-li" onclick="opendropdown()">
+                <b id="mobile-dropdown-li-head">
+                    Termékeink
+                    <div id="mobile-dropdown-li-arrow"
+                         onclick="opendropdown();">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </b>
+                    <ul class="mobile-dropdown">
+                        <li><a href="./kolbasz.html">Kolbászok</a></li>
+                        <li><a href="./csaptelepek.html">Csaptelepek</a></li>
+                    </ul>
+            </li>
+            <li><a href="./rolunk.html">Rólunk</a></li>
+            <li id=""><a href="./tgeri.html">Extra</a></li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+
+</div>
+
+
+
+
+
+    <!-- titkos -->
+    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
+
+    <!-- title  -->
+    <!-- <div class="title-wrapper">
+            <img src="./kepek/kodifej.png" alt="" class="gif" id="leftgif">
+            <p class="title">Üdvözöllek <br> Tóth Geri Kolbászboltjában!</p>
+            <a href="./csaptelepek.html"><p class="subtitle csaptelep">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+            <img src="./kepek/favicon.png" alt="" class="gif" id="rightgif">
+
+    </div> -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="fooldal">Főoldal</a></li>
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn termekeink" id="termekeink">Termékeink</button>
+                <div class="dropdown-content" style="font-weight: 100;" id="drop-kolbi">
+                    <a href="./kolbasz.html" class="termek">Kolbászok, hurkák, virslik</a>
+                    <a href="./csaptelepek.html" class="termek">Csaptelepek (ÚJ!)</a>
+                </div>
+                </div>
+            </li>
+            <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
+            <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
+            <li><a href="./tgeri.html">Extra</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart cart"></i>
+                    <span class="cart-item-count"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- banner -->
+<img src="./kepek/kolbaszbolt_gerivel.png" alt="tgeri" class="geriboy">
+
+<div class="main_dropdown_div">
+    <p class="egykerdes">Van <b>EGY KÉRDÉSE?</b> ↓</p>
+    <div class="dropdown"> 
+        <button class="dropbtn">Elérhetőségeink</button>
+        <div class="dropdown-content">
+            <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
+            <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
+            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: gergototh539@gmail.com</a>
+        </div>
+    </div>
+    </div>
+    <div class="title-wrapper">
+        <p class="title">TÓTH GERI FÉLE KOLBÁSZ ZSÍR TOMPAHÁT MÓDRA</p>
+        <p class="subtitle">- Saját Termék -</p>
+    </div>
+    <div class="kolbasz-container">
+        <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kolbasz">
+        <div class="kolbasz-title-container">
+            <div class="kolbasz-title">
+                <span class="sajat-termek">- Saját Termék -</span>
+                <p class="kolbasz-name">Tóth Geri Féle Kolbász Zsír Tompahát Módra</p>
+                <p class="kolbasz-price">1.990- Ft</p>
+            </div>
+            <div class="vertical-line"></div>
+        </div>
+        <div class="kolbasz-desc" style="text-align: justify;">
+            <p>Tompahát legjobb Fülzsírmentes kolbász zsírja egyenesen Tompahát szívéből!</p><br>
+
+            <div class="cool-button-3-div" >
+            <p href="https://www.google.com" class="cool-button-3" id="kosarba">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="button-text">Kosárba</span>
+                <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                </svg>
+            </p>
+        </div>
+    </div>
+       
+</div>
+</body>
+</html>
+
+
+
+
+

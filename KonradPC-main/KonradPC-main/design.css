@@ -1,0 +1,74 @@
+body {
+     /* ez segít a h1 és img középre igazításában */
+    padding-top: 40px;
+    background: url(retroaesthetic1.gif);
+    background-size: cover;
+}
+
+h1 {
+    color: #223A5E;
+    font-size: 70px;
+    background-color: #0D1F2D;
+    padding: 5px;
+    width: fit-content;
+    margin: 0 auto; /* középre igazítás */
+    border-radius: 20px;
+}
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.KonradIMG {
+    border-radius: 40px;
+    width: 20vw;
+    height: 14vw;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin: 20px auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block;
+}
+
+
+.KonradIMG:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+h2 {
+    font-family: monospace;
+    color: #223A5E;
+    font-size: 25px;
+    white-space: normal;
+    margin-bottom: 10px;
+    background-color: #0D1F2D;
+    width: 25vw;
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h3 {
+    font-family: monospace;
+    color: #223A5E;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    background-color: #0D1F2D;
+    margin: auto;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 25vw;
+}
+
+.leiras {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.Menu {
+
+}

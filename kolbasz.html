@@ -12,24 +12,44 @@
 </head>
 <body>
 
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+</div>
+
 <div class="container">
 
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
 
-
+    <button class="open-navbar-btn" id="cart-btn">
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
         <ul>
-            <li><button class="close-navbar-btn" onclick="closeNavbar()">
-                <i class="fa-solid fa-x fa-xl"></i>
-            </button></li>
-            <li class="home-li"><a href="./index.html">Főoldal</a></li>
+            <li>
+                <button class="close-navbar-btn" onclick="closeNavbar(); closedropdown();">
+                    <i class="fa-solid fa-x fa-xl"></i>
+                </button></li>
+            <li class="home-li" id="active-link"><a href="./index.html">Főoldal</a></li>
             <li id="mobile-dropdown-li" onclick="opendropdown()">
                 <b id="mobile-dropdown-li-head">
                     Termékeink
-                    <div id="mobile-dropdown-li-arrow" onclick="closedropdown(); event.stopPropagation();">
+                    <div id="mobile-dropdown-li-arrow"
+                         onclick="opendropdown();">
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
                     <div id="mobile-dropdown-li-arrow-close" onclick="closedropdown(); event.stopPropagation();">
@@ -37,23 +57,19 @@
                     </div>
                 </b>
                 <ul class="mobile-dropdown">
-                    <li><a href="./kolbasz.html" id="active-link">Kolbászok</a></li>
+                    <li><a href="./kolbasz.html">Kolbászok</a></li>
                     <li><a href="./csaptelepek.html">Csaptelepek</a></li>
                 </ul>
             </li>
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
-            <li id="accent-link"><a href="./kapcsolat.html">Kapcsolat</a></li>
-            <li id="cart-link">
-                <a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a>
-            </li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
         </ul>
     </nav>
 
-    <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
+    <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+
 </div>
-
-
 
 
     <!-- <img src="./kepek/svg/sausage.svg" alt=""> -->
@@ -61,10 +77,10 @@
     <!-- titkos -->
     <img src="./kepek/a kis tizes.jpg" alt="" class="tiz">
     <div class="title-wrapper">
-        <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
+        <img src="./kepek/kodifej.png" alt="" class="gif" id="leftgif">
         <p class="title">Tóth Geri Kolbászboltja</p> 
-        <a href="./csaptelepek.html"><p class="subtitle csaptelep">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
-        <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+        <p class="subtitle csaptelep"><a href="./csaptelepek.html">* MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+        <img src="./kepek/favicon.png" alt="" class="gif" id="rightgif">
     </div>
 
     
@@ -74,7 +90,7 @@
             <li><a href="./index.html" id="fooldal">Főoldal</a></li>
             <li>
                 <div class="dropdown">
-                <button class="dropbtn termekeink" id="termekeink" onclick="termekekRedirect()">Termékeink</button>
+                <button class="dropbtn termekeink" id="termekeink">Termékeink</button>
                 <div class="dropdown-content" style="font-weight: 100;" id="drop-kolbi">
                     <a href="./kolbasz.html" class="termek">Kolbászok, hurkák, virslik</a>
                     <a href="./csaptelepek.html" class="termek">Csaptelepek (ÚJ!)</a>
@@ -84,7 +100,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -105,7 +121,7 @@
 <div class="dropdown"> 
     <button class="dropbtn">Elérhetőségeink</button>
     <div class="dropdown-content">
-        <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
+        <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" >6621 Tompahát, Kolbi út 10.</a>
         <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
         <a href="#" id="emailLink" onclick="copyEmail(event)">Email: gergototh539@gmail.com</a>
     </div>
@@ -114,19 +130,19 @@
 
 <!-- Webshop -->
     <div class="title-wrapper">
-        <img src="./kepek/tgeriforog.gif" alt="Főni" class="gif" id="kolbaszgif" title="Főni">
+        <img src="./kepek/kodifej.png" alt="Főni" class="gif" id="leftgif" title="kodifej">
         <p class="title">
-            Kolbászok<br> 
-            Hurkák<br> 
+            Kolbászok,
+            Hurkák,
             Virslik
         </p> 
-        <img src="./kepek/tgeriforog_invert.gif" alt="Főni" class="gif" id="kolbaszgif" title="Főni">
+        <img src="./kepek/kolbasz-jarat.png" alt="Főni" class="gif" id="rightgif" title="kolbász járat">
     </div>
 
 
 
     <!-- Webshop -->
-    <div class="page-container">
+    <div class="page-container" id="termekek">
         <section class="products-section" id="scroll">
             <p class="web-above">
                 Minden terméket itt készítünk el a saját receptünkből. <br>
@@ -135,24 +151,24 @@
             <div class="products-grid">
                 <!----------------- Saját Termékek ------------------->
                 <!-- Házi Kolbász -->
-                <div class="product">
+                <div class="product" >
                     <div class="product-container">
                         <img class="product-img" src="./kepek/kolbaszok/hazikolbi.jpg" alt="Házi Kolbász">
-                        <p class="product-name"><b>- Saját Termék! - </b><br>Házi Kolbász</p> 
+                        <p class="product-name"><b>- Saját Termék! - </b><br> Házi Kolbász</p> 
                         <span class="product-price">3.990- Ft</span>
                     </div> 
-                    <div class="vl"></div>
+                    <!--<div class="vl"></div>-->
                     <div class="product-description-container">
                         <p class="product-desc-name"><b> - Saját Termék - </b><br> Házi Kolbász</p>
                         <div class="product-description">
                             <p>Minden egyes darabot gondos odafigyeléssel, házon belül készítünk, egy olyan recept alapján, amit hosszú hónapokon át finomítottunk – éppen azért, hogy mindenki megtalálja benne a saját kedvenc ízjegyét.</p>
 
                             <p>A kolbász ízvilága kifinomult, mégis karakteres – enyhén füstös, kellemesen fűszeres, de nem tolakodó. Pont olyan, amit szívesen megosztanál valakivel... vagy nem.</p>
-
+                            
                             <p>Tálalva extra mustáros házi szósszal, ami egy kicsit édeskés, egy kicsit pikáns, de teljesen egyedi. Mellé friss, roppanós zöldségek, némi savanyított finomság (ami szezonálisan változik), és 1–2 szelet puha, rusztikus kenyér, az adag nagyságától függően.</p>
                         </div>
                         <div class="cool-button-3-div">
-                        <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                        <a href="./hazikolbasz.html" class="cool-button-3">
                             <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                             <span class="button-text">Tudj meg többet</span>
                             <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -162,27 +178,28 @@
                         </div>
                     </div>
                 </div>
-                <hr class="product-divider">
-                
+
+                <hr style="margin-top: 10px; margin-bottom: 10px;" class="product-divider">
+
                 <!-- Kilbi Kolbi  -->
                 <div class="product">
                     <div class="product-container">
                     <img class="product-img" src="./kepek/kolbaszok/kilbikolbi.png" alt="Kilbi Kolbi">
-                    <p class="product-name"><b>- Saját Termék! - </b><br>Kilbi Kolbi</p> 
+                    <p class="product-name"><b>- Saját Termék! - </b><br>Kilbi Kolbi</p>
                     <span class="product-price">4.390- Ft</span>
                 </div>
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
                         <p class="product-desc-name"><b> - Saját Termék - </b><br> Kilbi Kolbi</p>
                         <div class="product-description">
-                            <p>Minden egyes darabot gondos odafigyeléssel, házon belül készítünk, egy olyan recept alapján, amit hosszú hónapokon át finomítottunk – éppen azért, hogy mindenki megtalálja benne a saját kedvenc ízjegyét.</p>
+                            <p>Ez nem csak egy kolbász. Ez a kolbász, amit nem lehet elmagyarázni – csak átélni lehet. A Kilbi Kolbi minden falatja egy vadregényes falusi vásár hangulatát idézi meg: füst, zsivaj, mustárfoltok, kacagás, és a háttérben sercegő vaslap. Ezt az ízt csak az ismeri, aki már egyszer ráharapott… és azóta sem tud szabadulni tőle.</p>
 
-                            <p>A kolbász ízvilága kifinomult, mégis karakteres – enyhén füstös, kellemesen fűszeres, de nem tolakodó. Pont olyan, amit szívesen megosztanál valakivel... vagy nem.</p>
+                            <p>A recept teljesen házon belül született: nem másoltuk le senkiét, nem nyúltunk más hagyományához. Ez egy kilbire szabott, rusztikus, enyhén csípős, vastagabb húsú kolbász, amit direkt úgy állítottunk össze, hogy ne simuljon bele a kínálatba – hanem kilógjon belőle.</p>
 
-                            <p>Tálalva extra mustáros házi szósszal, ami egy kicsit édeskés, egy kicsit pikáns, de teljesen egyedi. Mellé friss, roppanós zöldségek, némi savanyított finomság (ami szezonálisan változik), és 1–2 szelet puha, rusztikus kenyér, az adag nagyságától függően.</p>
+                            <p>Tálalva hagymás krumplival vagy friss puha kenyérrel, kérésre enyhén ecetes uborkával, és a házi "Kilbi szószunkkal", ami egy titkos, füstös-paprikás keverék. Hétvégére, lakodalomba, vagy csak úgy… amikor valami őszintén kolbászosra vágysz.</p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="./kilbikolbi.html" class="cool-button-3" >
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -193,27 +210,27 @@
                     </div>
                 </div>
                 <hr class="product-divider">
-                
-                
+
+
                 <!-- Virsli Disznótorral -->
                 <div class="product">
                     <div class="product-container">
-                        <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.png" alt="Virsli Disznótorral" style="object-fit: cover;">
+                        <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.jpg" alt="Virsli Disznótorral">
                         <p class="product-name"><b>- Saját Termék! - </b><br>Virsli Disznótorral</p> <br>
-                        <span class="product-price">3.290- Ft</span> 
+                        <span class="product-price">4.990- Ft</span>
                     </div>
-                    <div class="vl"></div>
+                    <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
                         <p class="product-desc-name"><b>- Saját Termék! - </b><br>Virsli Disznótorral</p>
                         <div class="product-description">
                             <p>Az ünnep minden falatja: a Virsli Disznótorral visszarepít a falusi disznótor hangulatába, ahol mindenki együtt nevet, eszik és élvezi az életet. A kulcs a minőségi, lédús virsliben rejlik, amit gondosan füstölünk, hogy a füst íze ne nyomja el a hús zamatait.</p>
-                            
+
                             <p>A virsli mellett omlós, ropogós szalonnaszeletek, édes hagymalekvár csipetnyi köménymaggal és friss, héjában sült burgonyaszeletek várnak. Az erdei gombaöntet, amellyel koronázunk, mély, földes aromákat hoz, míg a ropogós kenyérrel és házi kovászos uborkával az élmény minden eleme harmonikusan illeszkedik</p>
-                            
+
                             <p>Tálalási tipp: rendezd el egy nagy, közös tálban, hogy mindenki kedve szerint halászhasson a legjobb falatokból. </p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="virslidisznotorral.html" class="cool-button-3">
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -224,26 +241,26 @@
                     </div>
                 </div>
                 <hr class="product-divider">
-                
+
                 <!-- Véres Májas Kolbász -->
                 <div class="product">
                     <div class="product-container">
-                        <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.png" alt="Véres Májas Kolbász" style="object-fit: cover;">
+                        <img class="product-img" src="./kepek/kolbaszok/veres-majas-kolbasz.png" alt="Véres Májas Kolbász">
                         <p class="product-name"><b>- Saját Termék! - </b><br>Véres Májas Kolbász</p> <br>
-                        <span class="product-price">3.290- Ft</span> 
+                        <span class="product-price">5.990- Ft</span>
                     </div>
-                    <div class="vl"></div>
+                    <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
                         <p class="product-desc-name"><b>- Saját Termék! - </b><br>Véres Májas Kolbász</p>
                         <div class="product-description">
                             <p>A Véres Májas Kolbász azoknak szól, akik nem félnek a sötét ízélményektől. Ez a kolbász a hurkakészítés művészetét a belsőségek krémes simogatásával és a vér testes karakterével ötvözi.</p>
-                            
+
                             <p>A titok a tökéletes textúrában rejlik: a máj sima, krémes belseje és a vér mély, enyhén fémes íze egyensúlyban van a majoranna, a frissen őrölt bors és a szerecsendió finoman fűszeres jegyeivel. Minden szelet után párolt alma-csíkok és pirított hagymafenyő gondoskodik arról, hogy a gazdag élmény könnyed, gyümölcsös akcentust kapjon.</p>
-                            
+
                             <p>Tálalási tipp: meleg tejföllel, friss zöldfűszerekkel (kapor, petrezselyem), és néhány csepp balzsamecet.</p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="veresmajaskolbasz.html" class="cool-button-3">
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -254,56 +271,56 @@
                         </div>
                     </div>
                     <hr class="product-divider">
-                    
+
                     <!-- Négyévszak Kolbász -->
                     <div class="product">
-                        <div class="product-container">
-                            <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.png" alt="Négyévszak Kolbász" style="object-fit: cover;">
+                        <div class="product-container" style="align-self: flex-start;">
+                            <img class="product-img" src="./kepek/kolbaszok/negyevszak.jpg" alt="Négyévszak Kolbász">
                             <p class="product-name"><b>- Saját Termék! - </b><br>Négyévszak Kolbász</p> <br>
-                            <span class="product-price">3.290- Ft</span> 
+                            <span class="product-price">10.990- Ft</span>
                         </div>
-                        <div class="vl"></div>
+                        <!-- <div class="vl"></div> -->
                         <div class="product-description-container">
                             <p class="product-desc-name"><b>- Saját Termék! - </b><br>Négyévszak Kolbász</p>
                             <div class="product-description">
                                 <p>A Négyévszak Kolbász négy külön kolbászt egyesít egy rúdon, hogy egyetlen harapással végigélvezhesd az évszakok ízskáláját. Ez az igazi ízforradalom: tavaszi, nyári, őszi és téli ízek egymásba fonódva, tökéletessé kovácsolva.</p>
-                                
+
                                 <p>Ez a különlegesség a tavaszi kolbász fűszeres frissességét, a nyári kolbász paradicsomos, piknikhangulatot idéző gazdagságát, az őszi kolbász gombás, erdős mélységeit és a téli kolbász füstölt szalonna-melegét tökéletes ízharmóniába olvasztja, hogy minden harapás egy szezonális utazássá váljon.</p>
-                                
+
                                 <p>Egyszerre válaszd őket egy tálon, vagy kóstold külön-külön – a Négyévszak Kolbász minden formában ünnep.</p>
+                                
                             </div>
-                            <div class="cool-button-3-div">
-                                <a href="https://www.google.com" class="cool-button-3" target="_blank">
-                                    <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
-                                    <span class="button-text">Tudj meg többet</span>
-                                    <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="product-divider">
-                    
-                    <!-- Nyári  -->
-                    <div class="product">
-                        <div class="product-container">
-                            <img class="product-img" src="./kepek/kolbaszok/virsli-disznotorral.png" alt="Négyévszak Kolbász" style="object-fit: cover;">
-                            <p class="product-name"><b>- Saját Termék! - </b><br>Négyévszak Kolbász</p> <br>
-                            <span class="product-price">3.290- Ft</span> 
-                        </div>
-                        <div class="vl"></div>
-                        <div class="product-description-container">
-                            <p class="product-desc-name"><b>- Saját Termék! - </b><br>Négyévszak Kolbász</p>
+                            <hr class="product-hr">
                             <div class="product-description">
-                                <p>A Gyulai Kolbász nálunk nem csak egy hagyomány, hanem egy gondosan újragondolt élmény – minden egyes darabot saját recept alapján, helyben készítünk, figyelve minden apró részletre. A füstölt íz dominál, de nem túlzó: inkább mély, lassan kibomló, amit a paprika és fokhagyma egyensúlya tesz igazán teljessé.</p>
-                                
-                                <p>A textúra az egyik legnagyobb erőssége: kívül enyhén roppan, belül szaftos és telt, minden falat karakteres, mégis letisztult. Akár magában, akár egy tartalmasabb étkezés részeként is tökéletes választás.</p>
-                                
-                                <p>Tálalva saját párolt hagymás szósszal, friss petrezselyemmel, némi kovászos uborkával, és pár szelet puha kenyérrel – de igény szerint kérhető mellé egy kis csípős lilahagymalekvár is, ami még mélyebbre tolja az ízeket.</p>
+                                <p class="product-desc-name"><b>Tartalmaz: </b><br>Nyári Kolbász</p>
+                                <p>A Nyári Kolbász a napfényes piknikek, kertvégi tűzrakások és baráti nevetések ízét zárja magába. A paradicsomalapú fűszerezés, egy leheletnyi bazsalikom és a hús szaftos könnyedsége együtt idézik fel az igazi mediterrán nyarat.</p>
+
+                                <p>Nem túl nehéz, nem túl fűszeres – csak pont annyira, hogy a hőségben is jól essen. A végeredmény egy könnyen grillezhető, ízében játékos, hangulatában derűs kolbász. Tálalható friss salátával, hideg tejfölös mártogatóval vagy simán csak egy ropogós kiflivel.</p>
                             </div>
+                            <!-- <hr class="product-hr"> -->
+                            <div class="product-description">
+                                <p class="product-desc-name">Tavaszi Kolbász</p>
+                                <p>A Tavaszi Kolbász a friss zöld ízek és a fűszeres lendület mesterműve. Mintha egy virágzó kertet zárnánk kolbászbélbe: friss petrezselyem, citromhéj, egy csipetnyi csípős paprika, és az enyhén grillezett újhagyma adja meg azt az élményt, ami minden harapással a tavaszi napsütés alá repít.</p>
+
+                                <p>Könnyed, mégis karakteres. A húsos alapot kifejezetten világosabbra hagytuk, hogy a zöldfűszerek ragyoghassanak benne. Friss kenyérrel, tejfölös uborkasalátával vagy akár zöldborsókrémmel az igazi – tavaszi piknikek kötelező darabja.</p>
+                            </div>
+                            <!-- <hr class="product-hr"> -->
+                            <div class="product-description">
+                                <p class="product-desc-name">Téli Kolbász</p>
+                                <p>A Téli Kolbász igazi belső fűtés. Füstölt szalonnás alapja olyan mélyen és krémesen olvad el a szájban, hogy minden falat olyan, mint egy kandalló mellett töltött este. A fokhagyma és a fekete bors melegítő csípőssége nem tolakodó, de határozottan jelen van.</p>
+
+                                <p>Ez a kolbász testes, vastagabb falatokat kíván, amihez jól illik egy adag forró káposzta, mustáros burgonya vagy egy bögre forralt bor. A tél minden komorságát elfeledteti – egy szelet után máris otthon vagy.</p>
+                            </div>
+                            <!-- <hr class="product-hr"> -->
+                            <div class="product-description">
+                                <p class="product-desc-name">Őszi Kolbász</p>
+                                <p>A Őszi Kolbász az avarillatú erdők, gombás szedések és hosszabbra nyúló esték konyhai lenyomata. A töltelékbe került pirított vargánya, enyhe fahéj és rozmaring – ezek együtt egy mély, umami gazdagságú ízvilágot hoznak létre, ami melegséget ad minden falatban.</p>
+
+                                <p>A hús sötétebb tónusú, füstösebb, és kissé szaftosabb – hogy az őszi étvágyat valóban kielégítse. Legjobban sült tökkel, párolt lilakáposztával vagy édesburgonyapürével érvényesül.</p>
+                            </div>
+                            
                             <div class="cool-button-3-div">
-                                <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                                <a href="./negyevszak.html" class="cool-button-3">
                                     <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                     <span class="button-text">Tudj meg többet</span>
                                     <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -315,29 +332,57 @@
                     </div>
                     <hr class="product-divider">
 
-
-
+                    
 
                     <!----------------- Saját Termékek vége ------------------->
-                <!-- Dárdás Piknikrúd  -->
+                    <div class="product">
+                        <div class="product-container">
+                            <img class="product-img" src="./kepek/kolbaszok/szaraz-kolbasz.png" alt="Bratwurst">
+                            <p class="product-name">Gyulai Szárazkolbász Tompahát Módra</p> <br>
+                            <span class="product-price">3.690- Ft</span> 
+                        </div>
+                        <!-- <div class="vl"></div> -->
+                        <div class="product-description-container">
+                            <p class="product-desc-name">Gyulai Szárazkolbász Tompahát Módra</p>
+                            <div class="product-description">
+                                <p>A Gyulai Szárazkolbász Tompahát Módra egy klasszikus újraértelmezése, amely a békési hagyományokat hordozza, de sajátos, vidéki stílusban, ahogyan azt Tompaháton szokás. A karakteres füst és a lassú szárítás mély, koncentrált ízvilágot eredményez, ami minden falatban visszahozza a hagyományos gyulai piacok hangulatát.</p>
+        
+                                <p>A textúra sűrű, mégis jól vágható, az ízben pedig a csemegepaprika, a fokhagyma és a maréknyi tört kömény gondoskodik arról, hogy a kolbász ne csak rágós legyen – hanem emlékezetes. A különlegességét a gyulai alaprecept apró, mégis jelentős tompaháti változtatásai adják: hosszabb érlelési idő, erőteljesebb füstölés, és egy leheletnyi szárított csípőspaprika a végső tónushoz.</p>
+        
+                                <p>Tálalási tipp: vastag szeletekben, friss zöldpaprikával, paradicsomsalátával, vagy csak úgy, kenyér mellé – hogy a füst és a hagyomány beszélhessen helyettünk.</p>
+                            </div>
+                            <div class="cool-button-3-div">
+                                <a href="gyulai.html" class="cool-button-3">
+                                    <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
+                                    <span class="button-text">Tudj meg többet</span>
+                                    <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="product-divider">
+                
+                    <!-- Dárdás Piknikrúd  -->
                 <div class="product">
                     <div class="product-container">
-                    <img class="product-img" src="./kepek/kolbaszok/kilbikolbi.png" alt="Kilbi Kolbi">
-                    <p class="product-name"><br>Dárdás Piknikrúd</p> 
-                    <span class="product-price">4.390- Ft</span>
+                    <img class="product-img" src="./kepek/kolbaszok/dardaspiknikrud.jpg" alt="Kilbi Kolbi">
+                    <p class="product-name">Dárdás Piknikrúd</p> 
+                    <span class="product-price">3.590- Ft</span>
                 </div>
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
-                        <p class="product-desc-name"><br> Dárdás Piknikrúd</p>
+                        <p class="product-desc-name">Dárdás Piknikrúd</p>
                         <div class="product-description">
-                            <p>Minden egyes darabot gondos odafigyeléssel, házon belül készítünk, egy olyan recept alapján, amit hosszú hónapokon át finomítottunk – éppen azért, hogy mindenki megtalálja benne a saját kedvenc ízjegyét.</p>
+                            <p>A Dárdás Piknikrúd nemcsak egy kolbász, hanem egy kirándulás kézben – egy igazi piknikkompatibilis élmény, ami a szabadság ízét hordozza magában. Ez a hosszúkás, könnyen szeletelhető kolbász ideális társ erdőben, vízparton, vagy akár a munkahelyi ebédszünetben.</p>
 
-                            <p>A kolbász ízvilága kifinomult, mégis karakteres – enyhén füstös, kellemesen fűszeres, de nem tolakodó. Pont olyan, amit szívesen megosztanál valakivel... vagy nem.</p>
+                            <p>Külsőre roppanós, belül enyhén füstölt, de karakteres. Az ízvilágban a fűszerpaprika, a majoránna és egy csipetnyi borókabogyó alkot kiegyensúlyozott harmóniát. Különlegessége, hogy bármikor készen áll a fogyasztásra – nem igényel sütést vagy melegítést, csak egy bicskát és egy jó falat kenyeret.</p>
 
-                            <p>Tálalva extra mustáros házi szósszal, ami egy kicsit édeskés, egy kicsit pikáns, de teljesen egyedi. Mellé friss, roppanós zöldségek, némi savanyított finomság (ami szezonálisan változik), és 1–2 szelet puha, rusztikus kenyér, az adag nagyságától függően.</p>
+                            <p>Tálalási tipp: kemény tojás, ecetes uborka, vagy paprikakrém társaságában tálalva, akár egy fatálon, akár egy hátizsák mélyéről előhúzva – a Piknikrúd mindig a természethez igazodik.</p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="dardaspiknikrud.html" class="cool-button-3">
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -353,12 +398,12 @@
                     <div class="product">
                         <div class="product-container">
                             <img class="product-img" src="./kepek/kolbaszok/bratwurst.jpg" alt="Bratwurst">
-                            <p class="product-name"><br>Bratwurst</p> <br>
-                            <span class="product-price">3.290- Ft</span> 
+                            <p class="product-name">Bratwurst Németországi Tompahát Módra</p> <br>
+                            <span class="product-price">4.890- Ft</span> 
                         </div>
-                        <div class="vl"></div>
+                        <!-- <div class="vl"></div> -->
                         <div class="product-description-container">
-                            <p class="product-desc-name">Bratwurst</p>
+                            <p class="product-desc-name">Bratwurst Németországi Tompahát Módra</p>
                             <div class="product-description">
                                 <p>Az Bratwurst mindenekelőtt a német vásárok, Biergartenek és utcai ínyencségek megtestesítője – most azonban egy igazán különleges találkozást kínálunk: a hagyományos, selymes belső és a lágy héj megmaradt, de Tóth Gergő-féle magyar csavart kapott.</p>
         
@@ -367,7 +412,7 @@
                                 <p>Tálalási tipp: kézműves mustárral, házi savanyúsággal (uborka, lilahagyma), és egy jó adag frissen sült krumplival.</p>
                             </div>
                             <div class="cool-button-3-div">
-                                <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                                <a href="bratwurst.html" class="cool-button-3">
                                     <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                     <span class="button-text">Tudj meg többet</span>
                                     <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -384,10 +429,10 @@
                         <div class="product-container">
                             <img class="product-img" src="./kepek/kolbaszok/csabai.jpg" alt="Csabai Csemege Snack Kolbász">
                             <p class="product-name">Csabai Csemege Snack Kolbász</p>
-                            <span class="product-price-menu">Menüben: 1.990- Ft</span> 
-                            <span class="product-price-menu2">Magában: 1.290- Ft</span>
+                            <span class="product-price-menu">Menüben: 2.990- Ft</span> 
+                            <span class="product-price-menu2">Magában: 2.190- Ft</span>
                         </div>
-                    <div class="vl"></div>
+                    <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
                         <p class="product-desc-name">Csabai Csemege Snack Kolbász</p>
                         <div class="product-description">
@@ -398,7 +443,7 @@
                             <p>Ha pedig komolyabban gondolod, teljes menüben is kérhető, ilyenkor mellé ropogós virsli is érkezik, sőt, egy opcionális véres hurka is felkerülhet a tányérra – csak a bátraknak. A kísérő továbbra is ugyanaz: házi mustáros szósz, friss zöldségek, és a jól bevált puha, rusztikus kenyér.</p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="csabicsemege.html" class="cool-button-3">
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -415,9 +460,10 @@
                     <div class="product-container">
                         <img class="product-img" src="./kepek/kolbaszok/gyulai.jpg" alt="Gyulai Sertéskolbász">
                         <p class="product-name">Gyulai Sertéskolbász</p> <br>
-                        <span class="product-price">3.290- Ft</span> 
+                        <span class="product-price-menu">Menüben: 3.190- Ft</span> 
+                        <span class="product-price-menu2">Magában: 2.490- Ft</span> 
                     </div>
-                    <div class="vl"></div>
+                    <!-- <div class="vl"></div> -->
                     <div class="product-description-container">
                         <p class="product-desc-name">Gyulai Sertéskolbász</p>
                         <div class="product-description">
@@ -428,7 +474,7 @@
                             <p>Tálalva saját párolt hagymás szósszal, friss petrezselyemmel, némi kovászos uborkával, és pár szelet puha kenyérrel – de igény szerint kérhető mellé egy kis csípős lilahagymalekvár is, ami még mélyebbre tolja az ízeket.</p>
                         </div>
                         <div class="cool-button-3-div">
-                            <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                            <a href="gyulaisertes.html" class="cool-button-3">
                                 <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                                 <span class="button-text">Tudj meg többet</span>
                                 <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -446,9 +492,11 @@
                 <div class="product-container">
                     <img class="product-img" src="./kepek/kolbaszok/debreczeni.jpg" alt="Debreczeni Pároskolbász">
                     <p class="product-name">Debreczeni Pároskolbász</p> <br>
-                    <span class="product-price">3.290- Ft</span> 
+                    <span class="product-price-menu">Menüben: 3.390- Ft</span> 
+                    <span class="product-price-menu2">Magában - Pár: 2.790- Ft</span>
+                    <span class="product-price-menu2">Magában - Félpár: 2.190- Ft</span>
                 </div>
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
                 <div class="product-description-container">
                     <p class="product-desc-name">Debreczeni Pároskolbász</p>
                     <div class="product-description">
@@ -459,7 +507,7 @@
                         <p>Tálalási tipp: meleg, frissen sült kovászos baguette vagy házi kenyér, néhány szelet savanyított cékla, és egy csipetnyi pirított tökmag teszi teljessé az ízképet. Ez a kolbász kiváló vendégváró, tapas jellegű kóstolókészlet vagy akár egy tartalmas reggeli sztárja.</p>
                     </div>
                     <div class="cool-button-3-div">
-                        <a href="https://www.google.com" class="cool-button-3" target="_blank">
+                        <a href="debreczeni.html" class="cool-button-3">
                             <object data="./kepek/svg/sausage.svg" type="image/svg+xml" class="sausage-svg"></object>
                             <span class="button-text">Tudj meg többet</span>
                             <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -469,29 +517,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="product-divider">
 
-
-
-                <div class="product">
-                    <img class="product-img" src="./kepek/a kis tizes.jpg" alt="">
-                    <p class="product-name">kilbikolbi</p>
-                </div>
-
-                <div class="product">
-                    <img class="product-img" src="./kepek/a kis tizes.jpg" alt="">
-                    <p class="product-name">kilbikolbi</p>
-                </div>
-
-                <div class="product">
-                    <img class="product-img" src="./kepek/a kis tizes.jpg" alt="">
-                    <p class="product-name">kilbikolbi</p>
-                </div>
-
-                <div class="product">
-                    <img class="product-img" src="./kepek/a kis tizes.jpg" alt="">
-                    <p class="product-name">kilbikolbi</p>
-                </div>
             </div>
         </section>
 
@@ -516,7 +542,7 @@
 
                 <p id="drjozsef-p"> &nbsp; Nem tudom, mi vett rá, hogy betérjek a boltba. Talán egy isteni sugallat, egy nesz a szélben, vagy csak a kíváncsiság utolsó cseppje. De amit ott kaptam, az túlmutatott minden földi fogalmon. <i>A kolbász nem csupán étel volt. </i>Transzcendens élmény. Minden harapásnál éreztem a hagyományt, a gondoskodást, a szenvedélyt. A fűszerek, mint titkos szimfónia, keringőztek az ízlelőbimbóimon. A textúra – tökéletes. A füst – mennyei. A csípős változat – egy filozófiai kérdéseket felvető, mélyen spirituális utazás. </p>
 
-                <p id="drjozsef-p"> &nbsp; Azóta máshogy látom a világot. Minden döntésem előtt felteszem magamnak a kérdést: „Mit tenne Tóth Geri kolbásza?” Nem viccelek. Ez az egyetlen étel, amit reggelire, ebédre, vacsorára, és – ha tehetném – meditáció közben is fogyasztanék. Szüleim is megkönnyezték. A kutyám, aki válogatós, térdre rogyott. A szomszédom – vegetáriánus volt – megtért. </p>
+                <p id="drjozsef-p"> &nbsp; Azóta máshogy látom a világot. Minden döntésem előtt felteszem magamnak a kérdést: "Mit tenne Tóth Geri kolbásza?" Nem viccelek. Ez az egyetlen étel, amit reggelire, ebédre, vacsorára, és – ha tehetném – meditáció közben is fogyasztanék. Szüleim is megkönnyezték. A kutyám, aki válogatós, térdre rogyott. A szomszédom – vegetáriánus volt – megtért. </p>
 
                 <p id="drjozsef-p"> &nbsp; <i>Ez nem kolbász. Ez identitás. Ez remény. Ez: <b>Tóth Geri Kolbászboltja.  </b></i> </p>
 
@@ -664,7 +690,20 @@
                     <span class="comment-stars">★★★★★ (5,0)</span> 
                 </p>
                 <p class="comment-text">
-                    Baratnom emlitette hogy jojjunk el ide. Kecskemetiek vagyunk de azt mondta nagyon megeri annak ellenere hogy picit draga. Nekem a picit draga azt jelentene hogy 5-10 ezer egy kolbasz de nem. Arak full korrektek baratnom valszeg a 10 evvel ezelotti korszakban ragadt amikor meg 500ft volt egy kolbasz.
+                    Baratnom emlitette hogy jojjunk el ide. Kecskemetiek vagyunk de azt mondta nagyon megeri annak ellenere hogy picit draga. Nekem a picit draga azt jelentene hogy 10-20 ezer egy kolbasz de nem. Arak full korrektek baratnom valszeg a 10 evvel ezelotti korszakban ragadt amikor meg 500ft volt egy kolbasz.
+                </p>
+            </div>
+
+            <div class="comment">
+                <img src="./kepek/pfps/ikonikus.jpg" alt="user-pfp" class="user-pfp" style="object-position: bottom;">
+                <p class="comment-user">
+                    <span style="cursor: pointer;">@magyarpeti_labgombaja</span><br>
+                    <span class="comment-stars">★★★★★ (5,0)</span> 
+                </p>
+                <p class="comment-text">
+                    Tompahát... Egy jelentéktelen település a semmi közepén, néhányak szerint már szemétdomb a sivatag közepén. Még saját irányítószámuk sincs, és Tóth Geri Kolbászboltja mégis képes volt a legtöbbet kihozni a semmiből. <br>
+                    Viszont úgy hallottam, hogy néhány kolbászuk tartalmaz emberhúst is ami elég ijesztő... 😬 <br>
+                    Viccelek😅 úgy hallottam, hogy saját mangalicákból csinálják a kolbászokat ami nálam plusz pont!
                 </p>
             </div>
         </section>

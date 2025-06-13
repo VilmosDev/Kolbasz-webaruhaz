@@ -42,18 +42,50 @@
     <div class="pop-up-mobile">
         <span class="pop-up-mobile-header">Látom Mobilról vagy!</span>
         <p class="pop-up-mobile-text">
-            Sajnáljuk, de jelenleg csak a főoldal van mobilképernyőkre optimalizálva.
+            Sajnáljuk, de jelenleg teljesen csak a főoldal van mobilképernyőkre optimalizálva.
             Az esetlegesen a többi oldalon tapasztalt traumákért nem vállalunk felelősséget.
         </p>
 
     </div>
 
 </div>
-
+<div class="kosar">
+        <div class="kosar-title">
+            Kosár
+            <hr class="kosar-hr">
+            <div class="tartalom">
+                <!-- <div class="kosar-box">
+                    <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kosar-img">
+                    <div class="kosar-desc">
+                        <p class="kosar-prod-name">Házi Kolbász</p>
+                        <span class="kosar-ar">3.990- Ft</span>
+                        <div class="kosar-mennyiseg">
+                            <button id="sub">-</button>
+                            <span class="kosar-szam">1</span>
+                            <button id="add">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash kosar-torles"></i>
+                </div> -->
+            </div>
+        </div>
+        <div class="kosar-veg">
+            <div class="osszesen">Összesen</div>
+            <div class="osszeg">0- Ft</div>
+        </div>
+        <button class="vevo-gomb">Fizetés</button>
+        <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
+    </div>
 <div class="container">
+    
 
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+
+    <button class="open-navbar-btn" id="cart-btn">
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -81,14 +113,12 @@
             </li>
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
-            <li id="accent-link"><a href="./kapcsolat.html">Kapcsolat</a></li>
-            <li id="cart-link">
-                <a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a>
-            </li>
+            <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
         </ul>
     </nav>
 
     <div id="overlay" onclick="closeNavbar(); closedropdown();" aria-hidden="true"></div>
+
 </div>
 
 
@@ -96,15 +126,15 @@
 
 
     <!-- titkos -->
-    <!--<img src="./kepek/a kis tizes.jpg" alt="" class="tiz">-->
+    <!-- <img src="./kepek/a kis tizes.jpg" alt="" class="tiz"> -->
 
     <!-- title  -->
     <div class="title-wrapper">
-            <img src="./kepek/tgeriforog.gif" alt="" class="gif" id="leftgif">
+            <img src="./kepek/kodifej.png" alt="" class="gif" id="leftgif">
             <p class="title">Üdvözöllek <br> Tóth Geri Kolbászboltjában!</p>
             <!-- <p class="subtitle csaptelep">* AHOL MOSTMÁR <a href="./csaptelepek.html" style="font-size: 1.85rem;" id="csaptelep">CSAPTELEP</a> IS ELÉRHETŐ! *</p><br> -->
-            <a href="./csaptelepek.html"><p class="subtitle csaptelep">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
-            <img src="./kepek/tgeriforog_invert.gif" alt="" class="gif" id="rightgif">
+            <p class="subtitle csaptelep"><a href="./csaptelepek.html">* AHOL MOSTMÁR <span id="csaptelep">CSAPTELEP</span> IS ELÉRHETŐ! *</p></a>
+            <img src="./kepek/favicon.png" alt="" class="gif" id="rightgif">
 
     </div>
     <p id="quote"><q>Ez nem kolbász. Ez identitás. Ez remény. <b>Ez Tóth Geri Kolbászboltja!</b></q><span id="member-name"> - @dr_jozsef_andor_phd.szepeszeti_gepeszetben</span></p>
@@ -124,7 +154,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -143,7 +173,7 @@
         <div class="dropdown-content">
             <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
             <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
-            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: kolbaszshop@gmail.com</a>
+            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: gergototh539@gmail.com</a>
         </div>
     </div>
     </div>
@@ -169,10 +199,35 @@
                 <ul class="highlight-product-features">
                     <li>Friss, helyi alapanyagok</li>
                     <li>Füstös, karakteres ízvilág</li>
+                    <li>Limitálatlan mennyiségben elérhető</li>
+                </ul>
+                <div class="highlight-product-button-container">
+                    <a href="./zsir.html" class="cool-button-3 highlight-product-button">
+                        Tudj meg többet
+                        <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="highlight-product-item">
+            <div class="highlight-product-image-container">
+                <img src="./kepek/zsir.png" alt="Kiemelt termék: Zsír" class="highlight-product-image">
+            </div>
+            <div class="highlight-product-content">
+                <h2 class="highlight-product-title">Tóth Geri Féle Kolbász Zsír Tompahát Módra</h2>
+                <p class="highlight-product-description">
+                    A <b>Tóth Geri Féle Kolbász Zsír Tompahát Módra</b> Tóth Geri kolbászboltjának egyik legnépszerűbb, legkiemelkedőbb terméke. Kiváló minőségű alapanyagokból, hagyományos recept alapján, gondos odafigyeléssel készül, hogy minden falatban érezhető legyen a szenvedély és a szakértelem.
+                </p>
+                <ul class="highlight-product-features">
+                    <li>NEM Fülzsírt tartalmaz a szaga és íze ellenére!</li>
+                    <li>Folyós állag</li>
                     <li>Limitált mennyiségben elérhető</li>
                 </ul>
                 <div class="highlight-product-button-container">
-                    <a href="./kolbasz.html" class="cool-button-3 highlight-product-button">
+                    <a href="./zsir.html" class="cool-button-3 highlight-product-button">
                         Tudj meg többet
                         <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
@@ -199,7 +254,7 @@
                         <div class="dropdown-content">
                             <a href="https://maps.app.goo.gl/EdtB54R8QEv9ge9d6" target="_blank">6621 Tompahát, Kolbi út 10.</a>
                             <a href="#" id="telLink" onclick="copyTel(event)">Telefon: 06 20 555 5555</a>
-                            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: kolbaszshop@gmail.com</a>
+                            <a href="#" id="emailLink" onclick="copyEmail(event)">Email: gergototh539@gmail.com</a>
                             
                         </div>
                     </div>
@@ -229,6 +284,13 @@
                             <div class="partners-item">
                             <img src="./kepek/gyep.jpg" alt="gyepshop-icon" class="partners-item-img">
                             <b class="partners-item-name">Gyepshop.hu</b>
+                            </div>
+                        </a>
+
+                        <a href="https://mobcom.hu/">
+                            <div class="partners-item">
+                                <img src="./kepek/mobcom.jpg" style="object-position: bottom;" alt="csaptelepcsaba-icon" class="partners-item-img">
+                                <b class="partners-item-name">Mobcom Kft.</b>
                             </div>
                         </a>
                     </div>
