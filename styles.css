@@ -1122,15 +1122,7 @@ h1:hover {
 }
 
 @media (max-width: 1250px) {
-    .product {
-        width: 200%;
-        height: 100%;
-        margin-left: -50%;
-    }
-
-    .product-description-container {
-        transform: translateY(-25%);
-    }
+    
 
     .vl {
         transform: translateY(-0.75%);
@@ -1381,6 +1373,7 @@ h1:hover {
     margin: 3% auto;
     /* margin-left: 1%; */
     position: relative;
+
 }
 
 
