@@ -25,7 +25,18 @@ function copyTel2(event) {
         event.preventDefault();
         const tel = '06708008135';
         navigator.clipboard.writeText(tel).then(() => {
-            alert('Telefonszám másolva a vágólapra!');
+            alert('Csaptelep csaba telefonszám másolva a vágólapra!');
+        }).catch(err => {
+            console.error('Hiba történt a másolás során:', err, '<br> ');
+        });
+    }
+
+// kolbász járat tel
+function copyTel3(event) {
+        event.preventDefault();
+        const tel = '06207770777';
+        navigator.clipboard.writeText(tel).then(() => {
+            alert('Kolbász járat telefonszám másolva a vágólapra!');
         }).catch(err => {
             console.error('Hiba történt a másolás során:', err, '<br> ');
         });
@@ -62,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
   prev.addEventListener('click', () => changeSlide(-1));
   next.addEventListener('click', () => changeSlide(1));
 
-  // Initialize the first slide
+  // Az első slideot betölti vagy nemtom
   showSlide(slideIndex);
 });
 
@@ -116,11 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartItemCountBadge = document.querySelector('.cart-item-count');
     const purchaseButton = document.querySelector('.vevo-gomb');
     
-    // Load cart items from localStorage
+    // localstorageről betölti a kosarat
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     let cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
-    // Update cart count badge on load
+    // cart-countot betölti
     updateCartCountBadge();
 
     // Fizetés
@@ -238,25 +249,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Save cart to localStorage
+    // kosár mentése localstoragere
     function saveCartToStorage() {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
 
-    // Update cart count badge
+    // cart count badge update
     function updateCartCountBadge() {
         const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
         cartItemCountBadge.textContent = totalItems;
         cartItemCountBadge.style.visibility = totalItems > 0 ? 'visible' : 'hidden';
     }
 
-    // Update cart count
+    // cart count update
     function updateCartCount(change) {
         cartItemCount += change;
         updateCartCountBadge();
     }
 
-    // Initial cart update
+    // Elsődleges cart update
     updateCart();
 });
 
