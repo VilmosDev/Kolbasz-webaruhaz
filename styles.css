@@ -2221,6 +2221,31 @@ h1:hover {
 /*------------------------------------------------------*/
 
 
+@media (max-width: 700px) {
+
+    .cool-button-3-div {
+        width: fit-content;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0;
+    }
+
+    .cool-button-3 {
+        margin: auto;
+    }
+
+    #kosarba {
+        display: block;
+    }
+}
+
 .csaptelep-sub {
     font-size: 2rem;
     /* font-weight: bold; */
