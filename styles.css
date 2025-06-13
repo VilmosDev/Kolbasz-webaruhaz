@@ -677,20 +677,20 @@ h1:hover {
 .kosar {
     position: fixed;
     top: 0;
-    right: -100%;
+    transform: translatex(150%);
     width: 25rem;
     height: 100%;
     background-color: #fff;
     box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem 1rem 4rem;
-    z-index: 100000;
     overflow: auto;
-    transition: right 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 100000000000000100000000000000;
 }
 
 .kosar.active {
     right: 0;
+    transform: translatex(0);
 }
 
 .kosar-title {
