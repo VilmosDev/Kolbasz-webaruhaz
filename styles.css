@@ -676,6 +676,7 @@ h1:hover {
 /* ---------------------- Kosár --------------------- */
 .kosar {
     position: fixed;
+    right: 0;
     top: 0;
     transform: translatex(150%);
     width: 25rem;
