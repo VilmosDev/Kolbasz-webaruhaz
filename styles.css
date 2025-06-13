@@ -2249,3 +2249,7 @@ h1:hover {
     font-size: 2rem;
     font-weight: 400;
 }
+
+li a .cart {
+    font-size: 3rem;
+}
