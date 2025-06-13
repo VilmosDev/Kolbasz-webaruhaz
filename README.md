@@ -38,8 +38,8 @@
 
 <h2 align="left">🧑🏻‍💻Fejlesztők</h2>
 
-- ### [@ViliHun609](https://github.com/ViliHun609)
 - ### [@highendcpu](https://github.com/highendcpu)
+- ### [@ViliHun609](https://github.com/ViliHun609)
 - ### [@yodeku6](https://github.com/yodeku6)
 - ### [@bAZSIA](https://github.com/bAZSIA)
 
@@ -52,7 +52,7 @@
 | 👤 | Felhasználó | 🎨 Dizájn | 📱 Telefon nézet | 🔌 CSS | 🗄️ JavaScript | 🛒 Kosár rendszer | 🐙 Github |
 |:-:|:--|:--:|:--:|:--:|:--:|:--:|:--:|
 | <img src="https://github.com/ViliHun609.png" width="40" height="40"> | [@ViliHun609](https://github.com/ViliHun609) | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
-| <img src="https://github.com/highendcpu.png" width="40" height="40"> | [@highendcpu](https://github.com/highendcpu) | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
+| <img src="https://github.com/highendcpu.png" width="40" height="40"> | [@highendcpu](https://github.com/highendcpu) | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ |
 | <img src="https://github.com/yodeku6.png" width="40" height="40"> | [@yodeku6](https://github.com/yodeku6) | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
 | <img src="https://github.com/bAZSIA.png" width="40" height="40"> | [@bAZSIA](https://github.com/bAZSIA) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
