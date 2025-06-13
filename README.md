@@ -72,7 +72,7 @@
 <tr>
 <td>
 
-
+![Yodeku6's Commits](https://github-readme-stats.vercel.app/api?username=yodeku6&hide=contribs,prs,stars&show_icons=true&theme=transparent&hide_border=true&custom_title=Yodeku6&hide_rank=true)
 
 </td>
 <td>
