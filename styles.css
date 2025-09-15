@@ -1201,7 +1201,7 @@ h1:hover {
 .product-divider {
     position: relative;
     border-style: solid;
-    border-color: #afafaf;
+    border-color: var(--accent-color);
 }
 
 .webshop-container {
