@@ -2273,7 +2273,19 @@ li a .cart {
     order: 10;
 }
 
-.kolbasz-container {
+.kolbasz-container2 {
+    width: 80vw;
+    height: auto;
+    min-height: 30rem;
+    background-color: white;
+    margin: 5% auto;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
 }
