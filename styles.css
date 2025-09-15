@@ -1474,7 +1474,7 @@ h1:hover {
     /* border-width: 0.1rem;
     border-color: rgb(145, 77, 0);
     border-style: solid; */
-    box-shadow: 0 0 1rem 0.5rem rgb(61, 61, 61);
+    box-shadow: 0 0 2rem 0.2rem rgba(139, 67, 19, 0.5);
 }
 
 #in-footer {
@@ -1637,6 +1637,7 @@ h1:hover {
     align-items: center;
     gap: 2.5rem;
     background: linear-gradient(180deg, #ffe883 60%, #e9b67a 100%);
+    /* background-color: #ffe883; */
     border-radius: 1.2rem;
     box-shadow: 0 0 2rem 0.5rem rgba(92, 49, 0, 0.12);
     padding: 2rem 3rem;

@@ -106,7 +106,10 @@ function closedropdown() {
 const popUpContainer = document.getElementById('popUpContainer')
 
 function closePopUp() {
-    popUpContainer.classList.remove('showing');
+    if (popUpContainer) {
+        popUpContainer.classList.remove('showing');
+    }
+    try { localStorage.setItem('hasSeenWelcomePopup', 'true'); } catch (e) {}
 }
 
 
@@ -114,8 +117,31 @@ function closePopUp() {
 const popUpOverlay = document.getElementById('popUpOverlay')
 
 function closePopUp2() {
-    popUpOverlay.classList.remove('showing');
+    if (popUpOverlay) {
+        popUpOverlay.classList.remove('showing');
+    }
+    try { localStorage.setItem('hasSeenWelcomePopup', 'true'); } catch (e) {}
 }
+
+// Első látogatás pop-up kezelése
+document.addEventListener('DOMContentLoaded', function() {
+    const hasSeen = (() => {
+        try { return localStorage.getItem('hasSeenWelcomePopup') === 'true'; } catch (e) { return false; }
+    })();
+    if (popUpContainer && popUpOverlay) {
+        if (hasSeen) {
+            popUpContainer.classList.remove('showing');
+            popUpOverlay.classList.remove('showing');
+            popUpContainer.style.display = 'none';
+            popUpOverlay.style.display = 'none';
+        } else {
+            popUpContainer.style.display = '';
+            popUpOverlay.style.display = '';
+            popUpContainer.classList.add('showing');
+            popUpOverlay.classList.add('showing');
+        }
+    }
+});
 
 
 // cart ------------------------------------------------------------------------------------
