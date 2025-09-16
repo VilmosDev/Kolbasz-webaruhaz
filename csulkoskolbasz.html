@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <script src="https://kit.fontawesome.com/c90d95555a.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tóth Geri Féle Kolbász Zsír Tompahát Módra | Tóth Geri Kolbászboltja</title>    
+    <title>Csülkös Kolbász | Tóth Geri Kolbászboltja</title>    
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./kepek/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,47 +12,15 @@
 </head>
 <body>
 
- <div class="kosar">
-        <div class="kosar-title">
-            Kosár
-            <hr class="kosar-hr">
-            <div class="tartalom">
-                <!-- <div class="kosar-box">
-                    <img src="./kepek/kolbaszok/hazikolbi.jpg" alt="" class="kosar-img">
-                    <div class="kosar-desc">
-                        <p class="kosar-prod-name">Házi Kolbász</p>
-                        <span class="kosar-ar">3.990- Ft</span>
-                        <div class="kosar-mennyiseg">
-                            <button id="sub">-</button>
-                            <span class="kosar-szam">1</span>
-                            <button id="add">+</button>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-trash kosar-torles"></i>
-                </div> -->
-            </div>
-        </div>
-        <div class="kosar-veg">
-            <div class="osszesen">Összesen</div>
-            <div class="osszeg">0- Ft</div>
-        </div>
-        <button class="vevo-gomb">Fizetés</button>
-        <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
-    </div>
-
 <div class="container">
-   
 
     <button class="open-navbar-btn" onclick="openNavbar()">
         <i class="fa-solid fa-bars fa-xl"></i>
     </button>
 
     <button class="open-navbar-btn" id="cart-btn">
-        <p class="cart-p">
-           <i class="fa fa-shopping-cart mobile-cart" onclick=""></i>
-           <span class="cart-item-count"></span>
-        </p>
-
+        <i class="fa fa-shopping-cart cart"></i>
+        <span class="cart-item-count"></span>
     </button>
 
     <nav class="" id="navbar2">
@@ -83,6 +49,7 @@
             <li><a href="./rolunk.html">Rólunk</a></li>
             <li id=""><a href="./tgeri.html">Extra</a></li>
             <li id="accent-link" class="last-element"><a href="./kapcsolat.html">Kapcsolat</a></li>
+            <li><a><i class="fa fa-shopping-cart cart"></i><span class="cart-item-count"></span></a></li>
         </ul>
     </nav>
 
@@ -121,12 +88,7 @@
             <li><a href="./rolunk.html" id="rolunk">Rólunk</a></li>
             <li><a href="./kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
             <li><a href="./tgeri.html">Extra</a></li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-shopping-cart cart"></i>
-                    <span class="cart-item-count"></span>
-                </a>
-            </li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart cart" style="font-size: 40px;"></i></a></li>
         </ul>
     </nav>
 
@@ -144,47 +106,55 @@
         </div>
     </div>
     </div>
-    <div class="kolbasz-title">
-        <div class="title-wrapper">
-            <p class="title">TÓTH GERI FÉLE KOLBÁSZ ZSÍR TOMPAHÁT MÓDRA</p>
-            <p class="subtitle">- Saját Termék -</p>
-        </div>
+    <div class="title-wrapper">
+        <p class="title">CSÜLKÖS KOLBÁSZ</p>
+        <p class="subtitle">- Saját Termék -</p>
     </div>
     <div class="kolbasz-container">
-        <img src="./kepek/zsir.png" alt="" class="kolbasz" style="height: 25rem">
+        <img src="./kepek/kolbaszok/csulkoskolbasz.png" alt="" class="kolbasz">
         <div class="kolbasz-title-container">
             <div class="kolbasz-title">
                 <span class="sajat-termek">- Saját Termék -</span>
-                <p class="kolbasz-name">Tóth Geri Féle <br>Kolbász Zsír <br> Tompahát Módra</p>
-                <p class="kolbasz-price">1.990- Ft</p>
+                <p class="kolbasz-name">Csülkös Kolbász</p>
+                <p class="kolbasz-price">4.790- Ft</p>
             </div>
             <div class="vertical-line"></div>
         </div>
         <div class="kolbasz-desc">
-            <p>Ez a kolbász zsír nem csupán kiegészítő — egy önálló ízélmény. Házilag, lassan készített, tisztított kolbászzsírból készül, amelybe apró, omlós kolbászdarabokat keverünk. </p><br>
-            <p>Minden kanálban benne van az összes kolbászunk teljes ízvilága, ezzel egy ikonikus, feledhetetlen ízvilágot adva, mintha az összes kedvenc kolbászod ízét egy falatba sűrítettük volna. Könnyen kenhető, ugyanakkor tartalmas, karakteres jelenlétet ad mindennek.</p><br>
-            <p>Tálalási javaslat: vastag, frissen sült kenyérrel, érett paradicsommal és hegyes zöldpaprikával, vagy kísérőként savanyúságokkal és egy csipet friss petrezselyemmel.</p><br>
-
+            <p>A visszafogottabb tál egy elegáns, letisztult interpretáció: egyetlen, ízesített csülökdarab mellett egy gondosan elkészített kolbászkör, néhány szeletelt felvágott, pár darab házi savanyúság és egy-két mártogatós alkot mérsékelt, de karakteres egységet. Kevésbé túlzó, inkább fókuszált, ahol minden hozzávaló önmagában is érvényesül, de együtt kifinomult, klasszikus ízélményt ad.</p>
+<br>
+            <p>A textúra és az ízek itt visszafogottabbak: a csülök omlóssága és a kolbász füstös karaktere kapja a főszerepet, miközben a köretek visszafogottan segítik az élményt (friss kenyér, mustár, kovászos uborka). Ez a verzió ideális kisebb összejövetelekre vagy amikor a kimért, minőségi tálalás a cél.</p>
+    <br>                        
             <div class="cool-button-3-div" >
-            <p href="https://www.google.com" class="cool-button-3" id="kosarba">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="button-text">Kosárba</span>
-                <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                </svg>
-            </p>
+                <p href="https://www.google.com" class="cool-button-3" id="kosarba">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="button-text">Kosárba</span>
+                    <svg class="button-icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                </p>
+            </div> 
         </div>
     </div>
-       
+</div>
+
+<div class="kosar">
+    <div class="kosar-title">
+        Kosár
+        <hr class="kosar-hr">
+        <div class="tartalom">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+    </div>
+    <div class="kosar-veg">
+        <div class="osszesen">Összesen</div>
+        <div class="osszeg">0- Ft</div>
+    </div>
+    <button class="vevo-gomb">Fizetés</button>
+    <i class="fa-solid fa-xmark" id="kosar-bezaras"></i>
 </div>
 </body>
 </html>
-
-
-
-
-
-
 
 
 

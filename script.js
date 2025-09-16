@@ -106,7 +106,10 @@ function closedropdown() {
 const popUpContainer = document.getElementById('popUpContainer')
 
 function closePopUp() {
-    popUpContainer.classList.remove('showing');
+    if (popUpContainer) {
+        popUpContainer.classList.remove('showing');
+    }
+    try { localStorage.setItem('hasSeenWelcomePopup', 'true'); } catch (e) {}
 }
 
 
@@ -114,8 +117,31 @@ function closePopUp() {
 const popUpOverlay = document.getElementById('popUpOverlay')
 
 function closePopUp2() {
-    popUpOverlay.classList.remove('showing');
+    if (popUpOverlay) {
+        popUpOverlay.classList.remove('showing');
+    }
+    try { localStorage.setItem('hasSeenWelcomePopup', 'true'); } catch (e) {}
 }
+
+// Első látogatás pop-up kezelése
+document.addEventListener('DOMContentLoaded', function() {
+    const hasSeen = (() => {
+        try { return localStorage.getItem('hasSeenWelcomePopup') === 'true'; } catch (e) { return false; }
+    })();
+    if (popUpContainer && popUpOverlay) {
+        if (hasSeen) {
+            popUpContainer.classList.remove('showing');
+            popUpOverlay.classList.remove('showing');
+            popUpContainer.style.display = 'none';
+            popUpOverlay.style.display = 'none';
+        } else {
+            popUpContainer.style.display = '';
+            popUpOverlay.style.display = '';
+            popUpContainer.classList.add('showing');
+            popUpOverlay.classList.add('showing');
+        }
+    }
+});
 
 
 // cart ------------------------------------------------------------------------------------
@@ -200,11 +226,13 @@ document.addEventListener('DOMContentLoaded', function() {
         cartItems.forEach((item, index) => {
             const cartBox = document.createElement("div");
             cartBox.classList.add("kosar-box");
+            const unitPrice = parseInt(item.price.replace(/[^0-9]/g, '')) || 0;
+            const lineTotal = unitPrice * item.quantity;
             cartBox.innerHTML = `
                 <img src="${item.img}" alt="" class="kosar-img">
                 <div class="kosar-desc">
                     <p class="kosar-prod-name">${item.name}</p>
-                    <span class="kosar-ar">${item.price}</span>
+                    <span class="kosar-ar">${lineTotal}- Ft</span>
                     <div class="kosar-mennyiseg">
                         <button id="sub" onclick="updateQuantity(${index}, -1)">-</button>
                         <span class="kosar-szam">${item.quantity}</span>
@@ -215,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             cartContent.appendChild(cartBox);
             
-            total += parseInt(item.price.replace(/[^0-9]/g, '')) * item.quantity;
+            total += unitPrice * item.quantity;
             itemCount += item.quantity;
         });
 
@@ -244,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const kosarbaButton = document.getElementById('kosarba');
     if (kosarbaButton) {
         kosarbaButton.addEventListener('click', function() {
-            const product = document.querySelector('.kolbasz-container');
+            const product = document.querySelector('.kolbasz-container2') || document.querySelector('.kolbasz-container');
             addToCart(product);
         });
     }
